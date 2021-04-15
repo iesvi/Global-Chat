@@ -36,9 +36,9 @@
 
 # Diagramas de casos de uso
 
-![enter image description here](Im%C3%A1genes/diagrama%20de%20caso%20de%20uso%20-%20usuario.jpeg)
+![enter image description here](Im%C3%A1genes/diagrama%20de%20caso%20de%20uso%20-%20usuario.png)
 
-![enter image description here](Im%C3%A1genes/diagrama%20de%20caso%20de%20uso%20-%20correo.jpeg)
+![enter image description here](Im%C3%A1genes/diagrama%20de%20caso%20de%20uso%20-%20correo.png)
 
 # Análisis de requisitos Gestión de usuario
 
