@@ -93,6 +93,6 @@
 |Descripción |El usuario selecciona la opción de consultar los datos de la cuenta y el sistema mostrará los datos del usuario. |
 |Actores |Usuario |
 |Precondiciones |Ninguna. |
-|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona ver los datos de la cuenta. </p><p>3. 3. El sistema muestra los datos del usuario en el que se encuentra logeado. </p>|
+|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona ver los datos de la cuenta. </p><p>3. El sistema muestra los datos del usuario en el que se encuentra logeado. </p>|
 |Postcondiciones |Ninguna. |
 |Alternativas/Excepciones |Ninguna. |
