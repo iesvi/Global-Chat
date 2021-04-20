@@ -3,7 +3,7 @@
 
 ![enter image description here](Im%C3%A1genes/icono.png)
 
-# Análisis de requisitos funcionales. 
+# Análisis de requisitos funcionales
 
 # Definición del problema
 
