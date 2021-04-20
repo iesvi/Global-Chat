@@ -3,23 +3,14 @@
 
 ![enter image description here](Im%C3%A1genes/icono.png)
 
-***Global-Mail será una aplicación de servicio de correo donde a través de ésta podremos tanto enviar como recibir correos.*** 
+# Análisis de requisitos funcionales. 
 
- - En Global-Mail también se podrán adjuntar archivos junto al mensaje a enviar que el remitente podrá enviar al destinatario. Y el destinatario por su parte podrá descargar esos archivos.  
- 
- - Esta aplicación también implementará una función poca vista. En los envíos de correos SMTP los correos se mantendrán descargados en el correo del destinatario, pero el remitente podrá activar una opción al enviar un correo donde ese correo se podrá “autodestruir”. Es decir, una vez que el destinatario abra ese correo, tendrá un tiempo limitado de visión que el remitente definirá a la hora del envío. Una vez transcurrido ese tiempo el mensaje se “autodestruirá” y ya no volverá a ver forma de recuperar ese correo.  
- - También se implementará seguridad, como por ejemplo el uso de “sesión timeout” donde si una persona deja abierta la aplicación abierta en el ordenador y no le da uso, la aplicación detectará que no estará siendo usada y hará un cierre de sesión para aumentar así la seguridad. Si el usuario vuelve, introducirá de nuevo sus credenciales y podrá volver a acceder a su cuenta de correo.  
- - Las cuentas de los usuarios estarán recogidas en una base de datos con mayor seguridad donde la contraseña no se volverá visible si alguien consigue a acceder a la base de datos, es decir, la contraseña de mostrará encriptada.  
- - A su vez se tendrá en cuenta la seguridad del envío de los mensajes por lo que estos irán cifrados y firmados. Para validar que el envío de los mensajes mantienen seguridad, se hará uso de la herramienta Wireshark para capturar el tráfico de mensajes en red y comprobar que estos no pueden ser leídos por terceros. 
- - Para continuar se tendrá en cuenta la seguridad respecto a los ataques de sql inyection (inyección sql) que pueda realizar un atacante, para así aumentar la seguridad de nuestros usuarios. 
- - También se realizarán pruebas de envíos de correos para probar que la cuenta de correos del usuario está operativa. Utilizaré “fakesmtp server” para realizar estas pruebas.  
- - Haré uso de la biblioteca log4j de java para recoger los posibles errores emitidos por el programa. Estos posibles errores serán recogidos en archivos de texto cuyas salidas serán más entendibles por los usuarios. Incluyendo así por ejemplo una descripción del error ocurrido, la fechan en la que se produjo… Si los usuarios tienen alguna incidencia podrán comunicárselo por la pestaña de “Ayuda” al administrador de la aplicación o para agilizar el proceso, el usuario podrá ir a esos archivos de errores recogidos en una carpeta y comunicar al administrador los últimos pasos que se generó en el archivo de texto de informe de errores para que el administrador sepa dar una respuesta más rápida y certera al usuario de la solución más rápida.  
- - A la hora de registro de nuevos usuarios se planteará una opción de “Recuperar contraseña” por si el usuario la olvidó y para recuperarla deberá meter ciertos datos para autentificar su identidad, actualizar así su contraseña y poder volver a entrar en la aplicación con su nueva contraseña. También se intentará establecer un método de recuperación de contraseñas mediante un código de envío por SMS al móvil de la persona que deberá introducir para autentificar su identidad. Si el código es correcto podrá realizar la actualización de la contraseña. 
- - Y también haré uso de las librerías de Quartz cuya función son la planificación de tareas en Java. Esto me servirá por si quiero que a una cierta hora y unos días en específico quiero que mi aplicación ejecute una acción. Por ejemplo, mi aplicación implementará un apartado de papelera. Esta papelera será utilizada cuando queramos eliminar un correo de nuestra bandeja de entrada. Este no lo eliminará definitivamente por si eliminamos algún correo por error, pero si eliminamos de nuevo ese correo de la papelera ese correo si se eliminará definitivamente. Quartz podría entrar en juego por si por ejemplo cada domingo a las 13:00 de la tarde quiero que todos los archivos almacenados en la papelera sean eliminados de forma automática cada semana por temas de almacenamiento y rendimiento, por lo que Quartz realizará esa acción sin tener que nosotros hacerlo a mano ya que esa acción ya la habremos programado con anterioridad. 
- - Y una de las ultimas cosas pensadas para aplicación es realizar backups de la base de datos utilizadas para así tener copias de seguridad de nuestra aplicación por si alguna vez surge algún problema tener ese respaldo.  
+# Definición del problema
 
+Global-Mail será una aplicación de servicio de correo donde a través de ésta podremos tanto enviar como recibir correos. Para una mejor experiencia se hará uso de distintas herramientas investigadas previamente para un correcto uso. A su vez, se pondrá en funcionamiento una infraestructura como es CI/CD con Jenkins, es decir, consiste en prácticas combinadas de integración continua y entrega continua, cuyo despliegue se realizará en la nube.
 
-# Análisis de requisitos funcionales. Casos de uso.
+# Casos de uso
+
 ## Gestión de usuario:
 
 - Registrarse 
@@ -35,6 +26,38 @@
 - EliminarCorreoBandeja 
 - EliminarCorreoPapelera 
 
+# Funcionalidades de la app
+
+## Gestión de usuario
+
+ - Las cuentas de los usuarios estarán recogidas en una base de datos que cuentan con una gran seguridad donde la contraseña no se volverá visible si alguien consigue acceder a la base de datos, es decir, la contraseña de mostrará encriptada.
+ - A la hora de registro de nuevos usuarios se planteará una opción de **Recuperar contraseña** por si el usuario la olvidó. Para recuperarla deberá introducir ciertos datos para autentificar su identidad, actualizar así su contraseña y poder volver a entrar en la aplicación con su nueva contraseña. También se intentará establecer un método de recuperación de contraseñas mediante un código de envío por SMS al móvil de la persona que deberá introducir para autentificar su identidad. Si el código es correcto podrá realizar la actualización de la contraseña.
+
+## Gestión de correos
+
+ - En Global-Mail también se podrán adjuntar archivos junto al mensaje a enviar. El destinatario por su parte podrá descargar esos archivos.
+ - Esta aplicación también implementará una función poca vista que explicaré a continuación. En los envíos de correos SMTP los correos se mantendrán descargados en el correo del destinatario, pero el remitente podrá activar una opción al enviar un correo donde ese correo se podrá autodestruir. Es decir, una vez que el destinatario abra ese correo, tendrá un tiempo limitado de visión que el remitente definirá a la hora del envío. Una vez transcurrido ese tiempo, el mensaje se autodestruirá y ya no volverá a ver forma de recuperar ese correo. 
+ 
+## Gestión de seguridad
+ 
+ - También se implementará seguridad, como el uso del **Sesión Timeout**, donde si una persona deja abierta la aplicación en el ordenador y no le da uso, la aplicación detectará que no estará siendo usada y hará un cierre de sesión para aumentar así la seguridad. Si el usuario vuelve, introducirá de nuevo sus credenciales y podrá volver a acceder a su cuenta de correo.
+ - A su vez se tendrá en cuenta la seguridad del envío de los mensajes por lo que estos irán cifrados y firmados. Para validar que el envío de los mensajes mantienen seguridad, se hará uso de la herramienta de **capturas de tráfico de mensajes en red** y comprobar que estos no pueden ser leídos por terceros.
+ - Para continuar se tendrá en cuenta la **seguridad** respecto a los **ataques de SQL Inyection** (Inyección SQL) que pueda realizar un atacante, para así aumentar la seguridad de nuestros usuarios.
+ -  Al mismo tiempo, se realizarán **Backups** de la base de datos utilizadas de forma automática, para así tener copias de seguridad de nuestra aplicación por si alguna vez surge algún problema tener ese respaldo. 
+
+## Gestión de pruebas
+
+ - En cuanto a la gestión de pruebas, se hará uso de un servidor SMTP falso para probar que los usuarios reciben los correos electrónicos enviados por otros usuarios.   
+
+## Gestión de errores
+
+ - Se hará uso de unas biblioteca que permite a los desarrolladores de software escribir mensajes de registro, cuyo propósito es dejar constancia de una determinada transacción en tiempo de ejecución. Estos posibles errores serán recogidos en archivos de texto cuyas salidas serán más entendibles por los usuarios. Incluyendo así, por ejemplo, una descripción del error ocurrido, la fechan en la que se produjo… Si los usuarios tienen alguna incidencia podrán comunicárselo por la **pestaña de Ayuda** al administrador de la aplicación o para agilizar el proceso, el usuario podrá ir a esos archivos de errores recogidos en una carpeta y comunicar al administrador los últimos pasos que se generó en el archivo de texto de informe de errores para que el administrador sepa dar una respuesta más rápida y certera al usuario de la solución más rápida. 
+
+## Gestión de planificación de tareas
+
+ - Para este caso se hará uso de unas librerías cuya función son la planificación de tareas en Java. Esto servirá por si se quiere que a una cierta hora y unos días en específico la aplicación ejecute una acción. Por ejemplo, la aplicación implementará un apartado de papelera. Esta papelera será utilizada cuando queramos eliminar un correo de nuestra bandeja de entrada. Éste no lo eliminará definitivamente por si eliminamos algún correo por error, pero si eliminamos de nuevo ese correo de la papelera, ese correo si se eliminará definitivamente. Estas librerías podrán entrar en juego por si, por ejemplo, cada semana, los domingo a las 13:00 de la tarde, queremos que todos los archivos almacenados en la papelera sean eliminados de forma automática por temas de almacenamiento y rendimiento, por lo que ser realizará sin tener que hacerlo nosotros a mano ya que esa acción ya se habrá programado con anterioridad. 
+
+ 
 # Diagramas de casos de uso
 
 ![enter image description here](Im%C3%A1genes/diagrama%20de%20caso%20de%20uso%20-%20usuario.png)
