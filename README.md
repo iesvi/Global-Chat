@@ -1,4 +1,5 @@
 
+
 # Global-Mail
 
 ![enter image description here](Im%C3%A1genes/icono.png)
@@ -40,7 +41,7 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 ## Gestión de correos
 
  - En Global-Mail también se podrán adjuntar archivos junto al mensaje a enviar. El destinatario por su parte podrá descargar esos archivos.
- - Esta aplicación también implementará una función poca vista que explicaré a continuación. En los envíos de correos SMTP los correos se mantendrán descargados en el correo del destinatario, pero el remitente podrá activar una opción al enviar un correo donde ese correo se podrá autodestruir. Es decir, una vez que el destinatario abra ese correo, tendrá un tiempo limitado de visión que el remitente definirá a la hora del envío. Una vez transcurrido ese tiempo, el mensaje se autodestruirá y ya no volverá a ver forma de recuperar ese correo. 
+ - Esta aplicación también implementará una función poca vista. En los envíos de correos, los correos se mantendrán descargados en el correo del destinatario, pero el remitente podrá activar una opción al enviar un correo donde éste se podrá autodestruir. Es decir, una vez que el destinatario abra ese correo, tendrá un tiempo limitado de visión que el remitente definirá a la hora del envío. Una vez transcurrido ese tiempo, el mensaje se autodestruirá y ya no volverá a ver forma de recuperar ese correo. 
  
 ## Gestión de seguridad
  
@@ -61,7 +62,6 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 
  - Para este caso se hará uso de unas librerías cuya función son la planificación de tareas en Java. Esto servirá por si se quiere que a una cierta hora y unos días en específico la aplicación ejecute una acción. Por ejemplo, la aplicación implementará un apartado de papelera. Esta papelera será utilizada cuando queramos eliminar un correo de nuestra bandeja de entrada. Éste no lo eliminará definitivamente por si eliminamos algún correo por error, pero si eliminamos de nuevo ese correo de la papelera, ese correo si se eliminará definitivamente. Estas librerías podrán entrar en juego por si, por ejemplo, cada semana, los domingo a las 13:00 de la tarde, queremos que todos los archivos almacenados en la papelera sean eliminados de forma automática por temas de almacenamiento y rendimiento, por lo que ser realizará sin tener que hacerlo nosotros a mano ya que esa acción ya se habrá programado con anterioridad. 
 
- 
 # Diagramas de casos de uso
 
 ![enter image description here](Im%C3%A1genes/diagrama%20de%20caso%20de%20uso%20-%20usuario.png)
@@ -69,7 +69,6 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 ![enter image description here](Im%C3%A1genes/diagrama%20de%20caso%20de%20uso%20-%20correo.png)
 
 # Análisis de requisitos Gestión de usuario
-
 
 |Nombre |Registrarse |
 | - | - |
@@ -81,7 +80,6 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 |Postcondiciones |El usuario se registra en la aplicación. |
 |Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>4.1 Los datos introducidos por el usuario no son correctos. </p><p>4.2 El sistema informa al usuario que los datos no son correctos. </p><p>4.3 Vuelve al paso 2 para introducir los datos a rellenar con opciones válidas. </p>|
 
-
 |Nombre |IniciarSesión |
 | - | - |
 |ID: |CU-2 |
@@ -91,7 +89,6 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 |Curso normal |<p>1. El sistema solicita al usuario sus datos </p><p>2. El usuario introduce sus datos </p><p>3. El sistema valida los datos </p><p>4. El sistema da acceso al usuario </p>|
 |Postcondiciones |Ninguna. |
 |Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>3.1 Los datos introducidos no son correctos</p><p>3.2 El sistema avisa al usuario y vuelve al paso 1</p><p>**Alternativa 2:** </p><p>4.1 El sistema no puede dar acceso al usuario</p><p>4.2 El sistema avisa al usuario y finaliza el caso de uso</p>||
-
 
 |Nombre |CerrarSesión |
 | - | - |
@@ -103,7 +100,6 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 |Postcondiciones |El sistema le manda un mensaje de que la sesión ha finalizado. |
 |Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>2.1 El usuario cancela el iniciar sesión. </p><p>2.2 Fin d  el caso de uso. </p>|
 
-
 |Nombre |ModificarDatosUsuario |
 | - | - |
 |ID: |CU-4 |
@@ -114,7 +110,6 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 |Postcondiciones |El usuario posee ahora los datos modificados. |
 |Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>4.1 El sistema muestra que los datos introducidos por el usuario no son correctos.</p><p>4.2 Se vuelve al punto 3 hasta que se introduzcan datos válidos</p><p>**Alternativa 2:** </p><p>5.1 El usuario cancela modificar los datos.</p><p>5.2 Fin del caso de uso.</p><p>**Alternativa 3:** </p><p>6.1 Se produce un fallo en la conexión al actualizar.</p><p>6.2 El sistema muestra al usuario el error ocurrido y vuelve al paso 6.</p>||
 
-
 |Nombre |ConsultarDatosUsuario |
 | - | - |
 |ID: |CU-5 |
@@ -124,3 +119,13 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 |Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona ver los datos de la cuenta. </p><p>3. El sistema muestra los datos del usuario en el que se encuentra logeado. </p>|
 |Postcondiciones |Ninguna. |
 |Alternativas/Excepciones |Ninguna. |
+
+# Diagrama de Clases
+
+## FRONTEND
+
+![enter image description here](Im%C3%A1genes/TFG%202021-FONT%20DC.png)
+
+## BACKEND
+
+![enter image description here](Im%C3%A1genes/TFG%202021-BACK%20DC.png)
