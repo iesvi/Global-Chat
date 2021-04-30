@@ -1,0 +1,31 @@
+[
+  {
+    "id": 837489,
+    "idCliente": 0,
+    "idAdministrador": 0,
+    "codigo": 234,
+    "listaFotos": [
+      "lol"
+    ],
+    "nombre": "jaja",
+    "precio": 234.0,
+    "descripcion": "dnfjkwebnfjwew",
+    "estado": "xhhhhhhhhh345342534hh",
+    "publicado": true
+  },
+  {
+    "id": 43255555,
+    "idCliente": 0,
+    "idAdministrador": 0,
+    "codigo": 234,
+    "listaFotos": [
+      "lol",
+      "wlkefn"
+    ],
+    "nombre": "jaja",
+    "precio": 234.0,
+    "descripcion": "dnfjkwebnfjwew",
+    "estado": "xhhhhhhhhh345342534hh",
+    "publicado": true
+  }
+]
