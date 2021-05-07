@@ -10,6 +10,7 @@ import Button from '../commons/RegularButton';
 import ModalError from '../commons/ModalError';
 import { makeStyles } from '@material-ui/core/styles';
 import UsuarioDataService from "../Services/usuario.service";
+import firebase from 'firebase';
 
 const useStyles = makeStyles(theme => ({
     backdrop: {
@@ -103,6 +104,18 @@ const Login = () => {
         }
     }
 
+    function handleOnClickGoogle() {
+        const provider = new firebase.auth.GoogleAuthProvider()
+
+        const logeado = () => {
+            window.location.href = "/bandejaEntrada"
+        }
+
+        firebase.auth().signInWithPopup(provider)
+            .then(logeado)
+            .catch(error => console.error(`Error: ${error.code}: ${error.message}`))
+    }
+
 
 
     function clearErrorModal() {
@@ -163,6 +176,12 @@ const Login = () => {
                             <Button
                                 text='Log In'
                                 handleOnClick={handleOnClick}
+                                param={params}
+                            />
+
+                            <Button
+                                text='Log In With Google'
+                                handleOnClick={handleOnClickGoogle}
                                 param={params}
                             />
 

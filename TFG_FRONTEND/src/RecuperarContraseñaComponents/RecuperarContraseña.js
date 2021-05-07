@@ -28,6 +28,7 @@ const Login = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [telefono, setTelefono] = useState('');
     const [isLogin, setIsLogin] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [hasErrors, setHasErrors] = useState(false);
@@ -56,14 +57,13 @@ const Login = () => {
         }
     }
 
-    function buscarUsuario() {
-        var data = {
-            usuario: username,
-            contraseña: password
-        };
 
-        UsuarioDataService.findByUsuario(data)
+    function buscarTelefono() {
+        UsuarioDataService.findByTelefono(telefono)
             .then(response => {
+                this.setState({
+                    telefonos: response.data
+                });
                 console.log(response.data);
             })
             .catch(e => {
@@ -95,7 +95,7 @@ const Login = () => {
     }
 
     function handleOnClick() {
-        buscarUsuario();
+        buscarTelefono();
         setIsLoading(true);
         let login = { username, password }
         if (login) {
@@ -137,7 +137,7 @@ const Login = () => {
                                 <Item text='Introduce tu número de teléfono' />
                                 <Input
                                     attribute={{
-                                        name: 'username',
+                                        name: 'telefono',
                                         inputType: 'text',
                                         ph: ''
                                     }}

@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import TutorialDataService from "../Services/tutorial.service";
 import { Link } from "react-router-dom";
 import NotificacionComponent from './NotificacionComponent';
+import Login from '../Login/components/Header';
+import firebase from 'firebase';
+import Checkbox from '@material-ui/core/Checkbox';
 
 export default class AddTutorial extends Component {
   constructor(props) {
@@ -18,8 +21,42 @@ export default class AddTutorial extends Component {
       remitente: "",
       destinatario: "",
       asunto: "",
-      mensaje: ""
+      mensaje: "",
+      user: null
     };
+  }
+
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ user: user })
+      } else {
+        this.setState({ user: null })
+      }
+    })
+  }
+
+  handleAuth() {
+    const provider = new firebase.auth.GoogleAuthProvider()
+
+    const logeado = () => {
+      window.location.href = "/bandejaEntrada"
+    }
+
+    firebase.auth().signInWithPopup(provider)
+      .then(logeado)
+      .catch(error => console.error(`Error: ${error.code}: ${error.message}`))
+  }
+
+  handleLogout() {
+
+    const noLogeado = () => {
+      window.location.href = "/"
+    }
+
+    firebase.auth().signOut()
+      .then(noLogeado)
+      .catch(error => console.error(`Error: ${error.code}: ${error.message}`))
   }
 
   onChangeRemitente(e) {
@@ -80,6 +117,10 @@ export default class AddTutorial extends Component {
     });
   }
 
+  volver() {
+    window.location.href = "/bandejaEntrada"
+  }
+
   render() {
     return (
       <div>
@@ -90,16 +131,18 @@ export default class AddTutorial extends Component {
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to={"/enviarCorreo"} className="nav-link">
-                Enviar Correo
-              </Link>
+              <button class="btn btn-danger" onClick={this.volver}>
+                Volver
+              </button>
             </li>
           </div>
-          <div className="navbar-nav">
+          <div className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to={"/"} className="nav-link">
-                Logout
-              </Link>
+              <Login
+                user={this.state.user}
+                onAuth={this.handleAuth.bind(this)}
+                onLogout={this.handleLogout.bind(this)}
+              />
             </li>
           </div>
         </nav>
@@ -159,7 +202,7 @@ export default class AddTutorial extends Component {
 
               <div className="form-group">
                 <label htmlFor="mensaje">Mensaje</label>
-                <input
+                <textarea
                   type="text"
                   className="form-control"
                   id="mensaje"
@@ -172,7 +215,24 @@ export default class AddTutorial extends Component {
 
               <button onClick={this.saveTutorial} className="btn btn-success">
                 Enviar
-            </button>
+              </button>
+
+              <div>
+                <Checkbox
+                  color="primary"
+                  inputProps={{ 'aria-label': 'secondary checkbox' }}
+                /> <strong>Cifrar</strong>
+                <Checkbox
+                  color="primary"
+                  inputProps={{ 'aria-label': 'secondary checkbox' }}
+                /> <strong>Firmar</strong>
+              </div>
+              <div>
+                <Checkbox
+                  color="primary"
+                  inputProps={{ 'aria-label': 'secondary checkbox' }}
+                /> <strong>Autodestruir</strong>
+              </div>
             </div>
           )
           }

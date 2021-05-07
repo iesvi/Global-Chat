@@ -40,9 +40,9 @@
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/com/iesvi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../backend" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.38848922" />
     <property name="rest.client.default.execution.environment" value="dev" />
@@ -50,11 +50,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PerfilSamuel\Escritorio\TFG_BACKEND" />
       <recent name="D:\PerfilSamuel\Escritorio\TFG_BACKEND\src\test\java\com\iesvi" />
       <recent name="D:\PerfilSamuel\Escritorio\TFG_BACKEND\src\main\java\com\iesvi\gestionCorreos" />
       <recent name="D:\PerfilSamuel\Escritorio\TFG_BACKEND\src\main\java\com\iesvi\utils" />
       <recent name="D:\PerfilSamuel\Escritorio\TFG_BACKEND\src\main\java\com\iesvi\gestionCorreos\infra\controller" />
-      <recent name="D:\PerfilSamuel\Escritorio\TFG_BACKEND\src\main\java\com\iesvi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\Desktop\backend" />
@@ -66,16 +66,92 @@
       <recent name="com.iesvi.gestionCorreos.infra.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.iesvi.SMS" />
       <recent name="com.iesvi.gestionCorreos.application" />
       <recent name="com.iesvi.utils" />
       <recent name="com.iesvi.shared.infra.constant" />
       <recent name="com.iesvi.shared.infra.config" />
-      <recent name="com.iesvi.app" />
     </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080/api/v1/usuario/deleteUsuario/Samuel" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/v1/usuario/createUsuario" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;nombre&quot;: &quot;Samuel&quot;,&#10;  &quot;usuario&quot;: &quot;Sam&quot;,&#10;  &quot;telefono&quot;: &quot;675849328&quot;,&#10;  &quot;contraseña&quot;: &quot;xd&quot;,&#10;  &quot;mensajes&quot;: null&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/v1/usuario/findByUsuario/fwe" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/v1/usuario/findAll" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/v1/usuario/findByUsuario/60938e0128da4b37efbe3b97" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/api/v1/videojuego/findAll" />
@@ -249,8 +325,40 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AppSpringBoot">
-    <configuration name="Usuario#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/http-rest-api/Usuario.http" runType="Run single request">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Usuario#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/http-rest-api/Usuario.http" index="3" runType="Run single request">
       <method v="2" />
+    </configuration>
+    <configuration name="Usuario#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/test/http-rest-api/Usuario.http" index="4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="GestionUsuarioIntegraTestCase.ShouldRegisterUsuarioNotExistTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TFG_BACKEND" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iesvi.gestionUsuario.application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iesvi.gestionUsuario.application" />
+      <option name="MAIN_CLASS_NAME" value="com.iesvi.gestionUsuario.application.GestionUsuarioIntegraTestCase" />
+      <option name="METHOD_NAME" value="ShouldRegisterUsuarioNotExistTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="GestionUsuarioIntegraTestCase.ShouldRegisterVideojuegoNotExistTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TFG_BACKEND" />
@@ -263,22 +371,6 @@
       <option name="PACKAGE_NAME" value="com.iesvi.gestionUsuario.application" />
       <option name="MAIN_CLASS_NAME" value="com.iesvi.gestionUsuario.application.GestionUsuarioIntegraTestCase" />
       <option name="METHOD_NAME" value="ShouldRegisterVideojuegoNotExistTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VideojuegoInfraUnitTC.ShouldAddnewVideojuegoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TFG_BACKEND" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iesvi.gestionUsuario.infra.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.iesvi.gestionUsuario.infra" />
-      <option name="MAIN_CLASS_NAME" value="com.iesvi.gestionUsuario.infra.VideojuegoInfraUnitTC" />
-      <option name="METHOD_NAME" value="ShouldAddnewVideojuegoTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -297,28 +389,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-      <item itemvalue="HTTP Request.Usuario#1" />
+      <item itemvalue="HTTP Request.Usuario#3" />
+      <item itemvalue="HTTP Request.Usuario#4" />
       <item itemvalue="JUnit.GestionUsuarioIntegraTestCase.ShouldRegisterVideojuegoNotExistTest" />
-      <item itemvalue="JUnit.VideojuegoInfraUnitTC.ShouldAddnewVideojuegoTest" />
+      <item itemvalue="JUnit.GestionUsuarioIntegraTestCase.ShouldRegisterUsuarioNotExistTest" />
       <item itemvalue="Spring Boot.AppSpringBoot" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AppSpringBoot" />
-        <item itemvalue="HTTP Request.Usuario#1" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="JUnit.VideojuegoInfraUnitTC.ShouldAddnewVideojuegoTest" />
+        <item itemvalue="JUnit.GestionUsuarioIntegraTestCase.ShouldRegisterUsuarioNotExistTest" />
         <item itemvalue="JUnit.GestionUsuarioIntegraTestCase.ShouldRegisterVideojuegoNotExistTest" />
+        <item itemvalue="HTTP Request.Usuario#4" />
+        <item itemvalue="HTTP Request.Usuario#3" />
       </list>
     </recent_temporary>
   </component>
@@ -364,6 +448,10 @@
       <workItem from="1619676730581" duration="17162000" />
       <workItem from="1619762633838" duration="13069000" />
       <workItem from="1619780612239" duration="42000" />
+      <workItem from="1619781986793" duration="541000" />
+      <workItem from="1620195924099" duration="9386000" />
+      <workItem from="1620281174211" duration="9939000" />
+      <workItem from="1620379378774" duration="1099000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@ GET {{baseurlapi}}/usuario/findAll
 Accept: application/json
 
 #### TEST CONSULTAR USUARIO ##
-GET {{baseurlapi}}/usuario/findByUsuario/43255555
+GET {{baseurlapi}}/usuario/findByUsuario/fwe
 Accept: application/json
 
 #### TEST VIDEOJUEGO REGISTRAR VIDEOJUEGO ##
@@ -14,10 +14,10 @@ Content-Type: application/json
   "nombre": "Samuel",
   "usuario": "Sam",
   "telefono": "675849328",
-  "contraseña": 123,
-  "mensajes": 32423,
+  "contraseña": "xd",
+  "mensajes": null
 }
 
 #### TEST ELIMINAR USUARIO ##
-DELETE {{baseurlapi}}/usuario/deleteUsuario/837489
+DELETE {{baseurlapi}}/usuario/deleteUsuario/Samuel
 Accept: application/json

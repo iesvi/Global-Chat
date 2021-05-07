@@ -15,6 +15,8 @@ public interface UsuarioService {
 
     List<UsuarioDTO> findByUsuario(final String usuario);
 
+    List<UsuarioDTO> findByTelefono(final String telefono);
+
     UsuarioDTO createUsuario(final UsuarioDTO usuarioDTO);
 
     UsuarioDTO updateUsuario(final String id, final UsuarioDTO usuarioDTO);

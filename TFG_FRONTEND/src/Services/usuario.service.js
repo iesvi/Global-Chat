@@ -5,6 +5,14 @@ class UsuarioDataService {
         return http.get("/usuario/findAll");
     }
 
+    findByUsuario(titulo) {
+        return http.get(`/usuario/findByUsuario/${titulo}`);
+    }
+
+    findByTelefono(telefono) {
+        return http.get(`/usuario/findByTelefono/${telefono}`);
+    }
+
     create(data) {
         return http.post("/usuario/createUsuario", data);
     }
@@ -17,10 +25,6 @@ class UsuarioDataService {
         return http.delete(`/usuario/deleteUsuario/${id}`);
     }
 
-
-    findByUsuario(titulo) {
-        return http.get(`/usuario/findByUsuario/${titulo}`);
-    }
 }
 
 export default new UsuarioDataService();
