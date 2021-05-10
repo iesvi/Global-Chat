@@ -1,5 +1,4 @@
 /*
-
 package com.iesvi.gestionUsuario.application;
 
 import com.iesvi.gestionUsuario.application.dto.UsuarioDTO;
@@ -16,8 +15,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ConfiguracionPersistenciaTest.class, ConfigurationMongoTest.class})
@@ -43,16 +40,15 @@ public class GestionUsuarioIntegraTestCase {
 
     // Test que debe registrar un usuario
     @Test
-    public void ShouldRegisterVideojuegoNotExistTest() {
+    public void ShouldRegisterUsuarioNotExistTest() {
 
-        //Arrange
-        UsuarioDTO newVideojuego = usuarioService.createUsuario(buildUsuarioDto());
+        UsuarioDTO newUsuario = usuarioService.createUsuario(buildUsuarioDto());
 
-        UsuarioVO entityFind = (UsuarioVO) usuarioService.findByUsuario(newVideojuego.getId());
+        UsuarioVO entityFind = (UsuarioVO) usuarioService.findByUsuario(newUsuario.getUsuario());
 
-        Assert.assertNotNull("Devuelve nuevo Videojuego", newVideojuego);
-        Assert.assertNotNull("Videojuego Existe en BD", entityFind);
-        Assert.assertEquals("Videojuego creado y obtenido BD son iguales", newVideojuego, entityFind);
+        Assert.assertNotNull("Devuelve nuevo Usuario", newUsuario);
+        Assert.assertNotNull("Usuario Existe en BD", entityFind);
+        Assert.assertEquals("Usuario creado y obtenido de la BD son iguales", newUsuario, entityFind);
 
     }
 
@@ -98,4 +94,5 @@ public class GestionUsuarioIntegraTestCase {
 
     }
 
-}*/
+}
+*/

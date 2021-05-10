@@ -19,6 +19,7 @@
 ### Eclipse ###
 
 .metadata
+/**/bin/
 /**/.settings/
 /**/.classpath
 **/.loadpath

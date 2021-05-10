@@ -6,4 +6,5 @@ UsuarioVO: &UsuarioVO
   usuario: ${faker.name.username}
   telefono: ${faker.phoneNumber.cellPhone}
   contraseña: ${faker.internet.password}
+  mensajes:
 

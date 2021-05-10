@@ -43,6 +43,15 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Transactional
+    public List<UsuarioDTO> findByTelefono(String telefono) {
+        return usuarioRepository.findAll()
+                .stream()
+                .filter(usuarioVO -> usuarioVO.getTelefono().contains(telefono))
+                .map(usuarioConverterToDTO::convert)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
     public UsuarioDTO createUsuario(UsuarioDTO usuarioDTO) {
 
         UsuarioVO usuarioVO = usuarioConverterToVO.convert(usuarioDTO);

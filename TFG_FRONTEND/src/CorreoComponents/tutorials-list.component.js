@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TutorialDataService from "../Services/tutorial.service";
 import { Link } from "react-router-dom";
+import Login from "../Login/components/Header";
+import firebase from 'firebase';
 
 export default class TutorialsList extends Component {
   constructor(props) {
@@ -17,12 +19,43 @@ export default class TutorialsList extends Component {
       tutorials: [],
       currentTutorial: null,
       currentIndex: -1,
-      searchTitle: ""
+      searchTitle: "",
+      user: null
     };
   }
 
   componentDidMount() {
     this.retrieveTutorials();
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ user: user })
+      } else {
+        this.setState({ user: null })
+      }
+    })
+  }
+
+  handleAuth() {
+    const provider = new firebase.auth.GoogleAuthProvider()
+
+    const logeado = () => {
+      window.location.href = "/bandejaEntrada"
+    }
+
+    firebase.auth().signInWithPopup(provider)
+      .then(logeado)
+      .catch(error => console.error(`Error: ${error.code}: ${error.message}`))
+  }
+
+  handleLogout() {
+
+    const noLogeado = () => {
+      window.location.href = "/"
+    }
+
+    firebase.auth().signOut()
+      .then(noLogeado)
+      .catch(error => console.error(`Error: ${error.code}: ${error.message}`))
   }
 
   onChangeSearchTitle(e) {
@@ -96,6 +129,10 @@ export default class TutorialsList extends Component {
       });
   }
 
+  enviarCorreo() {
+    window.location.href = "/enviarCorreo"
+  }
+
   render() {
     const { searchTitle, tutorials, currentTutorial, currentIndex } = this.state;
 
@@ -109,16 +146,18 @@ export default class TutorialsList extends Component {
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to={"/enviarCorreo"} className="nav-link">
+              <button class="btn btn-primary" onClick={this.enviarCorreo}>
                 Enviar Correo
-              </Link>
+              </button>
             </li>
           </div>
-          <div className="navbar-nav">
+          <div className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to={"/"} className="nav-link">
-                Logout
-              </Link>
+              <Login
+                user={this.state.user}
+                onAuth={this.handleAuth.bind(this)}
+                onLogout={this.handleLogout.bind(this)}
+              />
             </li>
           </div>
         </nav>

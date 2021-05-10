@@ -1,3 +1,53 @@
+DELETE http://localhost:8080/api/v1/usuario/deleteUsuario/Samuel
+Accept: application/json
+
+<> 2021-05-06T143509.200.json
+
+###
+
+POST http://localhost:8080/api/v1/usuario/createUsuario
+Content-Type: application/json
+
+{
+  "nombre": "Samuel",
+  "usuario": "Sam",
+  "telefono": "675849328",
+  "contraseña": "xd",
+  "mensajes": null
+}
+
+<> 2021-05-06T143457.201.json
+
+###
+
+GET http://localhost:8080/api/v1/usuario/findByUsuario/fwe
+Accept: application/json
+
+<> 2021-05-06T143435.200.json
+
+###
+
+GET http://localhost:8080/api/v1/usuario/findAll
+Accept: application/json
+
+<> 2021-05-06T143428.200.json
+
+###
+
+GET http://localhost:8080/api/v1/usuario/findByUsuario/60938e0128da4b37efbe3b97
+Accept: application/json
+
+<> 2021-05-06T143415.200.json
+
+###
+
+GET http://localhost:8080/api/v1/usuario/findAll
+Accept: application/json
+
+<> 2021-05-06T143401.200.json
+
+###
+
 GET http://localhost:8080/api/v1/usuario/findAll
 Accept: application/json
 

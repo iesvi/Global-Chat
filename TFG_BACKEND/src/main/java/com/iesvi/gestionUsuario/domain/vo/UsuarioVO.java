@@ -14,7 +14,7 @@ import java.util.List;
 @EqualsAndHashCode
 @ToString
 @Builder
-@Document(collection = "Usuarios")
+@Document(collection = "Usuario")
 public class UsuarioVO {
 
     @Id

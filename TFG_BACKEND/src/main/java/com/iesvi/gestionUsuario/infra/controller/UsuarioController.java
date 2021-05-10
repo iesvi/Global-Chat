@@ -29,6 +29,11 @@ public class UsuarioController implements UsuarioAPI {
     }
 
     @Override
+    public ResponseEntity<List<UsuarioDTO>> findByTelefono(String telefono) {
+        return ResponseEntity.ok(usuarioService.findByTelefono(telefono));
+    }
+
+    @Override
     public ResponseEntity<UsuarioDTO> createUsuario(UsuarioDTO usuarioDTO) {
         return new ResponseEntity<>(usuarioService.createUsuario(usuarioDTO), HttpStatus.CREATED);
     }

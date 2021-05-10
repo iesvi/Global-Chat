@@ -15,7 +15,7 @@ import java.util.Collections;
 @EnableMongoRepositories(basePackages = "com.iesvi")
 public class ConfigurationMongoTest extends AbstractMongoClientConfiguration {
 
-    private static String BDNAME= "aadpsp2021";
+    private static String BDNAME= "TFG-Samuel";
 
     @Override
     protected String getDatabaseName() {
