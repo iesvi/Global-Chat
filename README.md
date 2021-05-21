@@ -1,4 +1,4 @@
-# Global-Mail
+# Global-Chat
 
 ![enter image description here](Im%C3%A1genes/icono.png)
 
@@ -6,7 +6,7 @@
 
 # Definición del problema
 
-Global-Mail será una aplicación de servicio de correo donde a través de ésta podremos tanto enviar como recibir correos. Para una mejor experiencia se hará uso de distintas herramientas investigadas previamente para un correcto uso. A su vez, se pondrá en funcionamiento una infraestructura como es CI/CD con Jenkins, es decir, consiste en prácticas combinadas de integración continua y entrega continua, cuyo despliegue se realizará en la nube.
+Global-Chat será una aplicación de chat a través de ésta podremos tanto enviar como recibir mensajes. Para una mejor experiencia se hará uso de distintas herramientas investigadas previamente para un correcto uso. A su vez, se pondrá en funcionamiento una infraestructura como es CI/CD con Jenkins, es decir, consiste en prácticas combinadas de integración continua y entrega continua, cuyo despliegue se realizará en la nube.
 
 # Intefaz Gráfica
 
@@ -19,31 +19,28 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 - Registrarse 
 - IniciarSesión 
 - CerrarSesión 
-- ModificarDatosUsuario 
 - ConsultarDatosUsuario 
 - RecuperarContraseña 
 
-## Gestión de correos:
+## Gestión de chat:
 
-- EnviarCorreo 
-- VerCorreosRecibidos
-- EliminarCorreoBandeja 
-- EliminarCorreoPapelera 
+- EnviarMensaje
+- VerMensajesRecibidos
 
 # Funcionalidades de la app
 
 ## Gestión de usuario
 
 - Registrarse: El usuario se registrará en la aplicación y las contraseñas se guardarán encriptadas en la base de datos para mayor seguridad.
-- Iniciar Sesión, Cerrar Sesión: Se realizará mediante un login normal de la página o través del una entidad externa como es google.
+- Iniciar Sesión, Cerrar Sesión: Se realizará mediante un login normal de la página o través del una entidad externa como es facebook.
 - Recuperar Contraseña: La contraseña será enviada por SMS al usuario.
 <--------------------------------------------------------------------------------------------------------------------------->
  - Las cuentas de los usuarios estarán recogidas en una base de datos que cuentan con una gran seguridad donde la contraseña no se volverá visible si alguien consigue acceder a la base de datos, es decir, la contraseña de mostrará encriptada.
  - A la hora de registro de nuevos usuarios se planteará una opción de **Recuperar contraseña** por si el usuario la olvidó. Para recuperarla deberá introducir ciertos datos para autentificar su identidad, actualizar así su contraseña y poder volver a entrar en la aplicación con su nueva contraseña. También se intentará establecer un método de recuperación de contraseñas mediante un código de envío por SMS al móvil de la persona que deberá introducir para autentificar su identidad. Si el código es correcto podrá realizar la actualización de la contraseña.
 
-## Gestión de correos
+## Gestión de chat
 
-- Enviar Correo: Los correos enviados serán enviados cifrados y firmados incluyendo la opción de autodestruir si se activa para eliminar el correo al tiempo indicado después de que el destinatario lo abra. También se podrán enviar archivos adjuntos que implementarán al correo.
+- Enviar Mensaje: Los correos enviados serán enviados cifrados y firmados. También se podrán enviar archivos adjuntos.
 <--------------------------------------------------------------------------------------------------------------------------->
  - En Global-Mail también se podrán adjuntar archivos junto al mensaje a enviar. El destinatario por su parte podrá descargar esos archivos.
  - Esta aplicación también implementará una función poca vista. En los envíos de correos, los correos se mantendrán descargados en el correo del destinatario, pero el remitente podrá activar una opción al enviar un correo donde éste se podrá autodestruir. Es decir, una vez que el destinatario abra ese correo, tendrá un tiempo limitado de visión que el remitente definirá a la hora del envío. Una vez transcurrido ese tiempo, el mensaje se autodestruirá y ya no volverá a ver forma de recuperar ese correo. 
@@ -109,15 +106,6 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 |Postcondiciones |El sistema le manda un mensaje de que la sesión ha finalizado. |
 |Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>2.1 El usuario cancela el iniciar sesión. </p><p>2.2 Fin d  el caso de uso. </p>|
 
-|Nombre |ModificarDatosUsuario |
-| - | - |
-|ID: |CU-4 |
-|Descripción |El usuario selecciona la opción de modificar los datos de la cuenta y modifica aque- llos datos de la cuenta usuario. El sistema registra los nuevos datos del usuario y ac- tualiza los datos. |
-|Actores |Usuario |
-|Precondiciones |Ninguna. |
-|Curso normal |<p>1. El usuario selecciona modificar datos de la cuenta. </p><p>2. El sistema muestra los datos del usuario a poder modificar. </p><p>3. El usuario introduce los nuevos datos a modificar. </p><p>4. El sistema verifica los nuevos datos introducidos. </p><p>5. Si los datos introducidos son aceptados por el sistema el usuario acepta modificar cambios. </p><p>6. El sistema actualiza los nuevos datos. </p>|
-|Postcondiciones |El usuario posee ahora los datos modificados. |
-|Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>4.1 El sistema muestra que los datos introducidos por el usuario no son correctos.</p><p>4.2 Se vuelve al punto 3 hasta que se introduzcan datos válidos</p><p>**Alternativa 2:** </p><p>5.1 El usuario cancela modificar los datos.</p><p>5.2 Fin del caso de uso.</p><p>**Alternativa 3:** </p><p>6.1 Se produce un fallo en la conexión al actualizar.</p><p>6.2 El sistema muestra al usuario el error ocurrido y vuelve al paso</p>||
 
 |Nombre |ConsultarDatosUsuario |
 | - | - |
@@ -139,43 +127,23 @@ Global-Mail será una aplicación de servicio de correo donde a través de ésta
 |Postcondiciones |El usuario podrá volver a entrar a la aplicación con su usuario y contraseña. |
 |Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>3.1 El sistema muestra que no encontró ninguna cuenta asociada a ese número.</p><p>3.2 El sistema vuelve a pedir al usuario que introduzca un número de teléfono válido.</p>|
 
-|Nombre |EnviarCorreo|
+|Nombre |EnviarMensaje|
 | - | - |
 |ID: |CU-7|
-|Descripción |El usuario selecciona la opción de enviar correo y envía un correo a un destinatario.|
+|Descripción |El usuario rellenará el recuadro para escribir el mensaje y le dará al botón de enviar mensaje.|
 |Actores |Usuario|
-|Precondiciones |Ninguna.|
-|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona enviar correo. </p><p>3. El usuario introduce todos los datos necesarios para el envío de correo. </p><p>4. El usuario acepta enviar el correo.</p><p>5. El sistema manda el correo al destinatario introducido.</p>|
+|Precondiciones |Debe escribir algo antes de enviar el mensaje.|
+|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona el usuario a quien desea enviar un mensaje.</p><p>3. El usuario introduce el mensaje que desea enviar. </p><p>4. El usuario acepta enviar el mensaje.</p><p>5. El sistema manda el mensaje al destinatario elegido.</p>|
 |Postcondiciones |Ninguna. |
-|Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>3.1 EL sistema muestra que quedaron campos obligatorios sin rellenar.</p><p>**Alternativa 2:** </p><p>4.1 El usuario introduce un destinatario no válido.</p><p>4.2 El sistema no encontró un destinatario con ese usuario y le pide al usuario que introduzca un un destinatario valido.</p>|
+|Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>4.1 EL sistema muestra que quedaron campos obligatorios sin rellenar.</p>|
 
-|Nombre |VerCorreosRecibidos|
+|Nombre |VerMensajesRecibidos|
 | - | - |
 |ID: |CU-8 |
-|Descripción |El usuario selecciona los correo de la bandeja de entrada y los visualiza uno a uno. |
+|Descripción |El usuario selecciona el usuario con el que quiere visualizar los mensajes recibidos. |
 |Actores |Usuario |
-|Precondiciones |Debe tener al menos un correo en la bandeja de entrada. |
+|Precondiciones |Ninguna. |
 |Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona un correo de su bandeja de entrada. </p><p>3. El sistema muestra los datos del correo. </p>|
-|Postcondiciones |Ninguna. |
-|Alternativas/Excepciones |Ninguna.|
-
-|Nombre |EliminarCorreoBandeja|
-| - | - |
-|ID: |CU-9|
-|Descripción |El usuario selecciona un correo de la bandeja de entrada y lo envía a la papelera.|
-|Actores |Usuario |
-|Precondiciones |Debe tener al menos un correo en la bandeja de entrada. |
-|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona un correo de su bandeja de entrada. </p><p>3. El usuario pulsará en la opción de enviar correo a la papelera. </p><p>4. El sistema enviará el correo a la papelera y dejará de estar en la bandeja de entrada del usuario.</p>|
-|Postcondiciones |Ninguna. |
-|Alternativas/Excepciones |Ninguna.|
-
-|Nombre |EliminarCorreoPapelera|
-| - | - |
-|ID: |CU-9|
-|Descripción |El usuario selecciona un correo de la papelera y lo eliminar definitivamente.|
-|Actores |Usuario |
-|Precondiciones |Debe tener al menos un correo en la papelera. |
-|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona un correo de la papelera. </p><p>3. El usuario pulsará en la opción de eliminar correo. </p><p>4. El sistema eliminará definitivamente el correo de la base de datos.</p>|
 |Postcondiciones |Ninguna. |
 |Alternativas/Excepciones |Ninguna.|
 
