@@ -14,6 +14,8 @@ Curso Académico: **2º DAM**
 
 Módulo: **Grado Superior de Desarrollo de Aplicaciones Multiplataformas**
 
+Año: **2020/2021**
+
 # Introducción
 
 Global-Chat será una aplicación de chat a través de ésta podremos tanto enviar como recibir mensajes. Para una mejor experiencia se hará uso de distintas herramientas investigadas previamente para un correcto uso. A su vez, se pondrá en funcionamiento una infraestructura como es CI/CD con Jenkins, es decir, consiste en prácticas combinadas de integración continua y entrega continua, cuyo despliegue se realizará en la nube.
