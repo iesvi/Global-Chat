@@ -60,7 +60,7 @@ Y con el comando:
 Podremos instalar todas las dependecias del fichero **package.json** y reconstruir la carpeta **node_modules**.
 Se muestra una captura de las dependencias usadas en el proyecto:
 
-![enter image description here](tecnologias/img/dependencias.PNG)
+![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/dependencias.PNG)
 
 ## Firebase
 ![A Quick Dive Into Firebae (Firebase) - DEV Community](https://res.cloudinary.com/practicaldev/image/fetch/s--XnV7nLnZ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/cufhvx44o66bb32ll2l8.png)
@@ -146,7 +146,7 @@ Vamos a ver ahora el ciclo de vida de un token JWT, si lo queremos utilizar en e
 
 Como hemos visto, JWT no es un estándar de autenticación, sino que simplemente un estándar que nos permite hacer una comunicación entre dos partes de identidad de usuario. Con este proceso, además, podríamos implementar la autenticación de usuario de una manera que fuera relativamente segura.
 
-![enter image description here](tecnologias/img/jwt.PNG)
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/jwt.PNG)
 
 Comenzaríamos desde el cliente, haciendo una petición POST para enviar el usuario y contraseña, y realizar el proceso de login.
 
