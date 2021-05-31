@@ -27,11 +27,11 @@ Realizar un estudio de la seguridad de los microservicios y una conexión segura
 
 ## Índice del contenido
 
-[> 1. Tecnologías usadas en el proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/Tecnologias.md)
+[1. Tecnologías usadas en el proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/Tecnologias.md)
 
-[> 2. Entorno de desarrollo.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/entornoDesarrollo/EntornoDesarrollo.md)
+[2. Entorno de desarrollo.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/entornoDesarrollo/EntornoDesarrollo.md)
 
-[> 3.  Análisis del proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/analisis/Analisis.md)
+[3.  Análisis del proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/analisis/Analisis.md)
 
-[> 4. Diseño del proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/dise%C3%B1o/Dise%C3%B1o.md)
+[4. Diseño del proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/dise%C3%B1o/Dise%C3%B1o.md)
 
