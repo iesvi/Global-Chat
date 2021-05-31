@@ -5,9 +5,13 @@
 ## Autor
 
 Este proyecto a sido realizado por **Samuel Conde López** con licencia Creative Commons: ![](https://github.com/iesvi/Proyectodam-1920-Alexis/raw/documentaci%C3%B3n/Licencia-Tipo2.png)
+
 Centro: **IES Ramón del Valle-Inclán**
+
 Profesor Tutor: **José Luís Rodríguez Rodríguez**
+
 Curso Académico: **2º DAM**
+
 Módulo: **Grado Superior de Desarrollo de Aplicaciones Multiplataformas**
 
 # Introducción
