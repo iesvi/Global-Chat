@@ -210,7 +210,7 @@ El modelo de la sala de chat se ve así:
 
 El  chatId se genera concatenando  senderId_recipientId, para cada conversación persistimos dos entradas con la misma chatId, una sala, entre remitente y destinatario y, la otra, entre destinatario y remitente, para asegurarnos de que ambos usuarios obtengan el mismo ID de chat.
 
-**Ccomunicación chat Frontend y Backend**
+**Comunicación chat Frontend y Backend**
 
 Se usará SockJS y  Stomp.js para comunicarnos con nuestro servidor a través de STOMP sobre WebSocket.
 
@@ -223,3 +223,72 @@ El método **connect()** establece una conexión a /ws, que es donde nuestro ser
 El método **onConnect()** se conecta al destino específico del usuario, por lo que recibe todos los mensajes enviados a ese destino.
 
 Finalmente, el método sendMessage() envía un mensaje a la ruta /app/chat, ruta que se definió en la clase ChatController en el servidor.
+
+## Gestión Álbum
+
+La gestión de álbum será gestionada desde el Frontend utilizando Firebase:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/codigoCrearAlbum.PNG)
+
+Se ha hecho uso del método onAlbumCreate que es utilizado cuando presionamos el botón de "Crear Album" y lo que realiza es la creación de un documento en firebase que funcionara como carpeta/album donde se irán subiendo las imágenes.
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/crearAlbum.PNG)
+
+Y para la subida de imágenes se ha realizado de la siguiente forma:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/subirFoto.PNG)
+
+Siendo el método onUpload en subir con .put la foto al documento "album" y en la carpeta/album en el que se encuentra. Para visualizar las imágenes se utiliza el método .getDownloadURL().
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/fotosAlbum.PNG)
+
+## Session Timeout
+
+Para aumentar la seguridad se ha añadido un session timeout a la aplicación, es decir, si el usuario deja de utilizar la aplicación, ésta al paso de un tiempo lo reconocerá y le saltará una pestaña preguntando si desea seguir en la aplicación:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/sessionTimeout.PNG)
+
+Si el usuario elige "Mantenerme Conectado" esta pestaña se cerrará y podrá seguir continuando utilizando la aplicación. En cambio si elige "Logout" o simplemente no elige nada en un tiempo, será deslogeado de la aplicación automáticamente y debe volver a iniciar sesión para poder entrar a su cuenta.
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/codigoSessionTimeout.PNG)
+
+El método **onIdle** es el que se encarga de deslogear al usuario si éste no elige ninguna opción en la pestaña.
+El método **stayActive** lo único que hace es cerrar la pestaña si se mantiene la sesión abierta con setModalIsOpen(false).
+Y el método **logOut** deslogea al usuario limpiando así su token de acceso para que tenga que volver a iniciar sesión en la aplicación.
+
+## Gestión Errores
+
+Para la gestión de errores se a hecho uso de la anotación @Slf4j (Simple Logging Facade for Java) comentada al principio del documento.
+
+Hay varios tipos de mensajes que pueden salir por consola y que nosotros utilizaremos para guardar en un archivo de texto para que el usuario pueda tenerlo más acesible.
+
+Los tipos de mensajes que hay son:
+
+ - log.debug("Debug log message");  
+ - log.info("Info log message"); 
+ - log.error("Error log message"); 
+ - log.warn("Warn log message");
+ - log.trace("Trace log message");
+
+Deben ser escritos con mensajes personalizados que mejoren la experiencia del usuario si le surge algún problema.
+
+Haciendo uso del código:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/codigoError.PNG)
+
+Con **logging.level.com.dailycodebuffer = TRACE** indicamos que queremos que coja la traza del código completa para que nos salgan todos los logs escritos en el código.
+Mediante **logging.file = appLog.log** se indica dónde se va a guardar el archivo, en este caso se guardará dentro de la carpeta principal con el nombre indicado (appLog.log).
+Y con **logging.pattern.file= [%level] %m%n** se indica que es lo que se quiere que se llege a mostrar, en mi caso solo quiero que se muestre el nivel de error y el mensaje. Se podría añadir por ejemplo la hora y el día.
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/applicationProperties.PNG)
+
+El código para que llegue a funcionar debe ir en un archivo "application.properties" dentro de la carpeta "resources" del proyecto.
+
+
+
+
+
+
+
+
+
