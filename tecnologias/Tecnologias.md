@@ -163,11 +163,17 @@ Tras verificar que el token es correcto y saber quién es el que ha hecho la pet
 De esta forma podríamos  **implementar el proceso de autenticación**, y hacerlo, además, con estos JSON Web Token.
 
 ## Web Sockets
-![Websockets en el IDE Arduino para el esp8266 - Multicóptero X](https://lh3.googleusercontent.com/proxy/4x0LsuH_H1UrPeNGHVEhrQWXD5JS2GLI-wk87Zr3t-PUyaxHH0nA7Ls_iWdUjfIQ0fCFDBpVrYQDjfXaqpSwObSGyHlspWii4oWdo_yx2xEolog9sQMjctAxSEE)
+![Websockets en el IDE Arduino para el esp8266 - Multicóptero X](https://lh3.googleusercontent.com/proxy/GeR-0m_VVxR_768KA8-OVPYzJ8wH-5JsB0f_wdX-Eccl_UnyMkGUn1o6ZwgZ_lyiskUkiXOd9kMYcibImCgvP-zYyTMd5cHeH7i9ADMQDsciqcGOk2TjdcHxbmI)
 
-**WebSocket** es una tecnología que proporciona un canal de comunicación bidireccional y full-duplex sobre un único socket TCP. Está diseñada para ser implementada en navegadores y servidores web, pero puede utilizarse por cualquier aplicación cliente/servidor.
+Un **WebSocket** es un protocolo que permite una comunicación bidireccional entre el servidor y el cliente.
 
-Gracias a Web Sockets se podrá realizar la conexión del Frontend con el Backend y crear así una aplicación de chat funcionable.
+A diferencia de HTTP, un protocolo de capa de aplicación, WebSocket es un protocolo de capa de transporte (TCP). Sin embargo, HTTP se usa para el protocolo de enlace inicial, luego se actualiza a la conexión TCP que usa WebSockets.
+
+WebSockets es un protocolo de bajo nivel, que define la forma de transferir mensajes sin información adicional sobre los mensajes entrantes.
+
+Por esta razón, el WebSocket RFC define el uso de subprotocolos para definir la estructura y los estándares de los mensajes. Usaremos STOMP como subprotocolo sobre WebSockets.
+
+El Protocolo de mensajes orientado a texto (STOMP) simple (o de transmisión continua) define un protocolo para que el servidor y el cliente se comuniquen con la mensajería.
 
 ## Kali Linux
 ![Linux: Kali 2019.4 ya disponible, con nuevo entorno de escritorio y modo  undercover](https://i.blogs.es/13bb67/kali-linux/1366_521.png)
