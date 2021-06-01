@@ -1,4 +1,3 @@
-
 # Codificación del proyecto
 En este documento se va explicar todos los casos de uso, acompañados del código más significativo que los implementa al igual que como funciona la interfaz gráfica.
 
