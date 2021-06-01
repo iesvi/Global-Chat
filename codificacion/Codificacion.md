@@ -1,3 +1,4 @@
+
 # Codificación del proyecto
 En este documento se va explicar todos los casos de uso, acompañados del código más significativo que los implementa al igual que como funciona la interfaz gráfica.
 
@@ -59,6 +60,9 @@ Ejemplo de uno de los microservicios:
 ![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/userService.PNG)
 
 # Casos de uso
+
+## Gestión de usuario
+
 ## Registrarse
 
 El usuario obtiene una vista de registro para completar con sus datos.
@@ -137,6 +141,85 @@ Se crea un punto de entrada donde se recibirá el userName devolviendo un **ok**
 
 El método de findByUsername es el que se encarga de buscar en la base de datos si hubo éxito o no.
 
+# Gestión de chat
+
+Lo primero en pensar en el modelo de mensaje a intercambiar entre servidor y cliente.
+
+El modelo de mensaje de chat se ve así:
+
+**ChatMessage.java**
+
+    public class ChatMessage { @Id private String id; private String chatId; private String senderId; private String recipientId; private String senderName; private String recipientName; private String content; private Date timestamp; private MessageStatus status; }
 
 
+El mensaje de chat es bastante sencillo, tiene los campos básicos para identificar un mensaje de chat entre el remitente y el destinatario.
 
+También tiene un campo de estado, que indica si el mensaje se entrega al usuario:
+
+**MessageStatus.java**
+
+    public enum MessageStatus { RECEIVED, DELIVERED }
+
+Cuando el servidor recibe un mensaje de chat, no lo envía directamente al usuario, sino que envía una notificación de chat para notificar al usuario que se ha recibido un nuevo mensaje. El mensaje se marcará como entregado una vez que el usuario lea el mensaje.
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/notificacionChatSinLeer.PNG)
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/notificacionChatLeido.PNG)
+
+La notificación de chat se ve así:
+
+**ChatNotification.java**
+
+    public class ChatNotification { private String id; private String senderId; private String senderName; }
+
+**Habilitar WebSocket y STOMP en Spring.**
+
+El primer paso para habilitar WebSocket es configurar el STOMP (Protocolo simple de mensajería orientada a texto) y el message broker (protocolo MBWS -> MessageBroker WebSocket Subprotocol).
+
+Se ha creado una clase con nombre WebSocketConfig con las anotaciones @Configuration y @EnableWebSocketMessageBroker para habilitar el manejo de mensajes de WebSocket, respaldado por el message broker.
+
+**WebSocketConfig.java**
+
+    @Configuration @EnableWebSocketMessageBroker public class WebSocketConfig implements WebSocketMessageBrokerConfigurer { @Override public void configureMessageBroker(MessageBrokerRegistry config) { config.enableSimpleBroker( "/user"); config.setApplicationDestinationPrefixes("/app"); config.setUserDestinationPrefix("/user"); } @Override public void registerStompEndpoints(StompEndpointRegistry registry) { registry .addEndpoint("/ws") .setAllowedOrigins("*") .withSockJS(); } @Override public boolean configureMessageConverters(List<MessageConverter> messageConverters) { DefaultContentTypeResolver resolver = new DefaultContentTypeResolver(); resolver.setDefaultMimeType(MimeTypeUtils.APPLICATION_JSON); MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter(); converter.setObjectMapper(new ObjectMapper()); converter.setContentTypeResolver(resolver); messageConverters.add(converter); return false; } }
+
+El primer método **configureMessageBroker**, configura un intermediario de mensajes en memoria simple con un destino para enviar y recibir mensajes, este destino tiene el prefijo /user, también se utiliza el prefijo /app para los mensajes que están destinados al método anotado con @MessageMapping.
+
+La ruta de destino del usuario /user es utilizada por el método ConvertAndSendToUser de SimpleMessagingTemplate para prefijar todos los destinos específicos del usuario con /user.
+
+El segundo método registra el /ws punto final STOMP. El cliente utiliza este punto final para conectarse al servidor STOMP. También habilita las opciones de respaldo de SockJS, por lo que se pueden usar opciones de mensajería alternativas si WebSockets no están disponibles.
+
+El último método configura un conversor de mensajes JSON, que Spring utiliza para convertir mensajes de chat a JSON.
+
+**ChatController.java**
+
+    @Controller public class ChatController { @Autowired private SimpMessagingTemplate messagingTemplate; @Autowired private ChatMessageService chatMessageService; @Autowired private ChatRoomService chatRoomService; @MessageMapping("/chat") public void processMessage(@Payload ChatMessage chatMessage) { var chatId = chatRoomService .getChatId(chatMessage.getSenderId(), chatMessage.getRecipientId(), true); chatMessage.setChatId(chatId.get()); ChatMessage saved = chatMessageService.save(chatMessage); messagingTemplate.convertAndSendToUser( chatMessage.getRecipientId(),"/queue/messages", new ChatNotification( saved.getId(), saved.getSenderId(), saved.getSenderName())); } }
+
+La anotación @MessageMapping asegura que si se envía un mensaje a /app/chat, el método processMessage se llama.
+
+Este método persiste el mensaje en MongoDB, luego llama al convertAndSendToUser, método para enviar el mensaje de notificación al usuario destinatario.
+
+**Generar el ID de chat.**
+
+Para cada conversación entre dos usuarios, creamos una sala de chat y generamos un ID de chat único para identificar la conversación entre los dos usuarios.
+
+El modelo de la sala de chat se ve así:
+
+**ChatRoom.java**
+
+    public class ChatRoom { private String id; private String chatId; private String senderId; private String recipientId; }
+
+El  chatId se genera concatenando  senderId_recipientId, para cada conversación persistimos dos entradas con la misma chatId, una sala, entre remitente y destinatario y, la otra, entre destinatario y remitente, para asegurarnos de que ambos usuarios obtengan el mismo ID de chat.
+
+**Ccomunicación chat Frontend y Backend**
+
+Se usará SockJS y  Stomp.js para comunicarnos con nuestro servidor a través de STOMP sobre WebSocket.
+
+    const connect = () => { const Stomp = require("stompjs"); var SockJS = require("sockjs-client"); SockJS = new SockJS("http://localhost:8080/ws"); stompClient = Stomp.over(SockJS); stompClient.connect({}, onConnected, onError); };
+
+El método **connect()** establece una conexión a /ws, que es donde nuestro servidor espera las conexiones. También define una devolución onConnected de llamada a la que se llamará después de una conexión exitosa y, onError si se produjo un error al conectarse al servidor.
+
+    const onConnected = () => { console.log("connected"); stompClient.subscribe( "/user/" + currentUser.id + "/queue/messages", onMessageReceived ); };
+
+El método **onConnect()** se conecta al destino específico del usuario, por lo que recibe todos los mensajes enviados a ese destino.
+
+Finalmente, el método sendMessage() envía un mensaje a la ruta /app/chat, ruta que se definió en la clase ChatController en el servidor.
