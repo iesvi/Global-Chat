@@ -49,4 +49,4 @@ Realizar un estudio de la seguridad de los microservicios y una conexión segura
 
 [7. Detalles técnicos.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/detalles/Detalles.md)
 
-[8. Problemas durante el desarrollo.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/tree/doc/problemas)
+[8. Problemas durante el desarrollo.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/problemas/Problemas.md)
