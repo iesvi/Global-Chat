@@ -93,7 +93,7 @@ En el gif que aparece arriba se explicará que es lo que se está realizando:
 
 - Al principio no se encuentra registrado por lo que la aplicación solo lo redirigirá a la URL de login (http://localhost:3000/login) ya que el servidor no recibe ningún token de inicio de sesión por por parte del usuario.
 
-- Seguidamente se inició sesión y pudimos ver en la URL que ahora nos permité navegar sin problemas entre las URL'S de la aplicación, usando como ejemplo la de chat (http://localhost:3000/chat).
+- Seguidamente inicia sesión y se puede ver en la URL que ahora nos permité navegar sin problemas entre las URL'S de la aplicación, usando como ejemplo la de chat (http://localhost:3000/chat).
 
 - Y para terminar se deslogea para ver que de nuevo volvemos a no tener acceso ya que el token se borró al terminar la sesión.
 
