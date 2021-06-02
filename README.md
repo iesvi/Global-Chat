@@ -52,3 +52,5 @@ Realizar un estudio de la seguridad de los microservicios y una conexión segura
 [8. Problemas durante el desarrollo.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/problemas/Problemas.md)
 
 [9. Mejoras posibles.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/mejoras/Mejoras.md)
+
+[10. Conclusiones.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/conclusion/Conclusion.md)
