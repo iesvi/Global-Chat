@@ -6,7 +6,7 @@ La aplicación iba a contar con una opción de "Recuperar Contraseña", que ser�
 
 El código fue creado y era funcional pero a la hora de integrarlo en la aplicación no encontraba la forma de que funcionara.
 
-## Intercambio de archivos por chat
+## Intercambio de archivos e imágenes por chat
 
 Se ha intentado implementar en el chat el intercambio de archivos e imágenes pero me ha sido imposible al tratar de implementarlo con el uso de Web Sockets y Json Web Token que tenía diseñado.
 
