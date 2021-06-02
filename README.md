@@ -8,7 +8,7 @@
 - [5. Álbumes](#álbumes)
 - [6. Subir Imagen](#subir-imagen)
 
-### 1. Registrarse
+### Registrarse
 
 Para poder empezar a utilizar la aplicación primeramente debemos registrando usando el botón de **Registrarse.**
 
@@ -20,13 +20,13 @@ Una vez dentro del formulario de registro tendremos que rellenarlo con nuestros 
 
 En el último campo a rellenar haría referencia a la imagen que aparecerá como foto de perfil. Insertando la URL de una imagen podremos usarla.
 
-### 2. Logearse
+### Logearse
 
 Una vez registrado introducimos nuestros datos en el login.
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/loginRelleno.PNG)
 
-### 3. Perfil
+### Perfil
 
 Si todo va bien, nos saldrá un aviso de bienvenida y un menú para navegar. El botón de la izquierda es el botón para cerrar sesión, el botón del centro nos llevaría a la pestaña de chat y por último el botón de la derecha nos llevaría a los álbumes.
 
@@ -36,7 +36,7 @@ Si poseemos una cuenta de Facebook podemos utilizarla también para logearnos, e
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/perfilUsuarioFacebook.PNG)
 
-### 4. Sala de chat
+### Sala de chat
 
 Si accedemos a la sala de chat, es decir clickando el botón del centro, veremos una pestaña como ésta:
 
@@ -70,13 +70,13 @@ Ahora, si queremos salir o volver a la pantalla de perfil solo debemos utilizar 
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/botonVolver.PNG)
 
-### 5. Álbumes
+### Álbumes
 
 Seguidamente, para utilizar los álbumes de fotos de la aplicación para subir o visualizar las fotos solo tendremos que volver a la pestaña de perfil y pulsar el botón de la derecha:
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/botonAlbum.PNG)
 
-### 6. Subir Imagen
+### Subir Imagen
 
 Una vez dentro, solo debemos indicar el nombre del álbum a crear y pulsar en "Crear Album", en mi caso crearé uno de prueba llamado "Flores":
 
