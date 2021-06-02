@@ -1,13 +1,13 @@
 # Problemas encontrados durante el desarrollo de proyecto
 ## Recuperación de contraseña
 
-La aplicación iba a contar con una opción de "Recuperar Contraseña" si el usuario llega a olvidarla, poder recuperarla introduciendo su número de teléfono (el que puso previamente al registrarse) y recibiendo por SMS la contraseña.
-El código fue creado y funcional pero a la hora de integrarlo en la aplicación no encontraba la forma de que funcionara.
+La aplicación iba a contar con una opción de "Recuperar Contraseña", que sería de uso por si el usuario llegara a olvidarla, poder recuperarla introduciendo su número de teléfono (el que introdujo previamente al registrarse) y recibiendo por SMS la contraseña.
+El código fue creado y era funcional pero a la hora de integrarlo en la aplicación no encontraba la forma de que funcionara.
 
 ## Intercambio de archivos por chat
 
-Se ha intentado implementar en el chat el intercambio de archivos pero ha sido imposible al tratar de implementarlo con el uso de Json Web Token que tenía diseñado.
-A su vez se ha creado una sección de álbumes pudiéndose realizar la subida de fotos en ellos.
+Se ha intentado implementar en el chat el intercambio de archivos e imágenes pero me ha sido imposible al tratar de implementarlo con el uso de Web Sockets y Json Web Token que tenía diseñado.
+Como reemplazo se ha creado una sección de álbumes pudiéndose realizar la subida de fotos en ellos.
 
 ## Jenkins y Amazon Web Service
 
