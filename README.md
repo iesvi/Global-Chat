@@ -46,3 +46,6 @@ Realizar un estudio de la seguridad de los microservicios y una conexión segura
 [5. Codificación.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/Codificacion.md)
 
 [6. Pruebas.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/pruebas/Pruebas.md)
+
+[7. Detalles técnicos.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/detalles/Detalles.md)
+
