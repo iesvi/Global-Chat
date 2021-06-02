@@ -1,102 +1,61 @@
+# Global-Chat
 
-# Manual de usuario para el uso de Global-Chat
+![enter image description here](Im%C3%A1genes/icono.png)
 
-- [1. Registrarse.](#registrarse)
-- [2. Logearse](#logearse)
-- [3. Perfil](#perfil)
-- [4. Sala de chat](#sala-de-chat)
-- [5. Álbumes](#álbumes)
-- [6. Subir Imagen](#subir-imagen)
+# Autor
 
-## Registrarse
+Este proyecto a sido realizado por **Samuel Conde López** con licencia Creative Commons: ![](https://github.com/iesvi/Proyectodam-1920-Alexis/raw/documentaci%C3%B3n/Licencia-Tipo2.png)
 
-Para poder empezar a utilizar la aplicación primeramente debemos registrando usando el botón de **Registrarse.**
+Centro: **IES Ramón del Valle-Inclán**
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/botonRegistroNormal.PNG)
+Profesor Tutor: **José Luis Rodríguez Rodríguez**
 
-Una vez dentro del formulario de registro tendremos que rellenarlo con nuestros datos, en mi caso pondré unos ficticios.
+Curso Académico: **2º DAM**
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/registroRelleno.PNG)
+Módulo: **Proyecto**
 
-En el último campo a rellenar haría referencia a la imagen que aparecerá como foto de perfil. Insertando la URL de una imagen podremos usarla.
+Ciclo: **Grado Superior de Desarrollo de Aplicaciones Multiplataforma**
 
-## Logearse
+Año: **2020/2021**
 
-Una vez registrado introducimos nuestros datos en el login.
+# Introducción
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/loginRelleno.PNG)
+Este proyecto final para el grado DAM tratará el desarrollo de una aplicación donde a través de ésta podremos tanto enviar como recibir mensajes. Para una mejor experiencia se hará uso de distintas herramientas investigadas previamente para un correcto uso. A su vez, se pondrá en funcionamiento una infraestructura como es CI/CD con Jenkins, es decir, consiste en prácticas combinadas de integración continua y entrega continua, cuyo despliegue se realizará en la nube.
 
-## Perfil
+## Objetivo General
 
-Si todo va bien, nos saldrá un aviso de bienvenida y un menú para navegar. El botón de la izquierda es el botón para cerrar sesión, el botón del centro nos llevaría a la pestaña de chat y por último el botón de la derecha nos llevaría a los álbumes.
+Realizar un estudio de la seguridad de los microservicios y una conexión segura que permita una mejor experiencia por parte del usuario dentro de la aplicación.
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/perfilUsuarioNormal.PNG)
+## Objetivos Específicos
 
-Si poseemos una cuenta de Facebook podemos utilizarla también para logearnos, en mi caso utilizaré la mía, y si es login es correcto nos llevaría a la misma pestaña de bienvenida con el usuario que hemos introducido.
+ - Implementar medidas de seguridad como Json Web Token, Spring Security...
+ - Codificación de la aplicación usando el modelo de arquitectura limpia.
+ - Desarrollo de una interfaz de usuario utilizando React.
+ - Implementación de Firebase para aprovechar sus grandes servicios que nos proporciona.
+ - Integración continua y despliegue continuo dockerizando la app.
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/perfilUsuarioFacebook.PNG)
+## Índice del contenido
 
-## Sala de chat
+[1. Tecnologías usadas en el proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/Tecnologias.md)
 
-Si accedemos a la sala de chat, es decir clickando el botón del centro, veremos una pestaña como ésta:
+[2. Entorno de desarrollo.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/entornoDesarrollo/EntornoDesarrollo.md)
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/chat.PNG)
+[3.  Análisis del proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/analisis/Analisis.md)
 
-En la parte de la izquierda se irán visualizando los usuarios que se vayan registrando y logeando en la aplicación. En este caso solo se encuentra el usuario de "Samuel Conde López" que es el usuario que logeé con Facebook.
+[4. Diseño del proyecto.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/dise%C3%B1o/Dise%C3%B1o.md)
 
-Para iniciar la conversación solo hay que pulsar encima del usuario y escribir el mensaje que le queramos enviar a través del cuadro de texto. 
+[5. Codificación.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/Codificacion.md)
 
-Si queremos hacer uso de emoticonos podemos usar el botón de la cara sonriente y se nos abrirá una pestaña de emoticonos que acompañarán al mensaje. 
+[6. Pruebas.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/pruebas/Pruebas.md)
 
-Para enviar el mensaje solo debemos pulsar la tecla "Enter" o usar el botón de la esquina inferior derecha para enviar el mensaje.
+[7. Detalles técnicos.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/detalles/Detalles.md)
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/chatEscribiendo.PNG)
+[8. Problemas durante el desarrollo.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/problemas/Problemas.md)
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/chatEscribiendoEmoticono.PNG)
+[9. Mejoras posibles.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/mejoras/Mejoras.md)
 
-Mensaje enviado al usuario:
+[10. Conclusiones.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/conclusion/Conclusion.md)
 
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/mensajeEnviado.PNG)
+[11. Bibliografía/Webgrafía.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/bibliografia/Bibliografia.md)
 
-Y mensaje recibido y leído por parte del usuario destinatario:
-
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/mensajeRecibidoSinLeer.PNG)
-
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/mensajeRecibidoLeido.PNG)
-
-El chat funcionaria de esa forma.
-
-Ahora, si queremos salir o volver a la pantalla de perfil solo debemos utilizar los botones de la esquina inferior izquierda:
-
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/botonVolver.PNG)
-
-## Álbumes
-
-Seguidamente, para utilizar los álbumes de fotos de la aplicación para subir o visualizar las fotos solo tendremos que volver a la pestaña de perfil y pulsar el botón de la derecha:
-
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/botonAlbum.PNG)
-
-## Subir Imagen
-
-Una vez dentro, solo debemos indicar el nombre del álbum a crear y pulsar en "Crear Album", en mi caso crearé uno de prueba llamado "Flores":
-
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/crearAlbum.PNG)
-
-Una vez creado el álbum nos aparecerá sin foto por lo que tendremos que introducir alguna. Solo debemos pulsar en el álbum creado y nos llevará a su interior:
-
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/albumSinFoto.PNG)
-
-Una vez dentro solo debemos pulsar en "Seleccionar Archivo" y una vez selecciona una imagen, pulsar en el botón de "Subir Imagen":
-
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/albumConFoto.PNG)
-
-Una vez subida la imagen podremos visualizarla y podremos subir tantas cuantos queramos para que puedan ser visualizadas por todos los miembros de la comunidad.
-
-Si visitamos el otro álbum ya creado previamente llamado "Samuel" encontraremos las siguientes imágenes:
-
-![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/albumSamuel.PNG)
-
-
-
-
-
+[Manual de Usuario.](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/manualUsuario.md)
