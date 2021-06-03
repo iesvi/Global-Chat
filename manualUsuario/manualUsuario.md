@@ -1,12 +1,12 @@
 
 # Manual de usuario para el uso de Global-Chat
 
-- [1. Registrarse.](#registrarse)
-- [2. Loguearse](#loguearse)
-- [3. Perfil](#perfil)
-- [4. Sala de chat](#sala-de-chat)
-- [5. Álbumes](#álbumes)
-- [6. Subir Imagen](#subir-imagen)
+- [Registrarse.](#registrarse)
+- [Loguearse.](#loguearse)
+- [Perfil.](#perfil)
+- [Sala de chat.](#sala-de-chat)
+- [Álbumes.](#álbumes)
+- [Subir Imagen.](#subir-imagen)
 
 ## Registrarse
 
