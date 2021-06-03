@@ -1,5 +1,6 @@
 
 
+
 # Diseño de la aplicación
 
 ## Diagrama de Clases
@@ -11,12 +12,12 @@
 |Nombre| Descripción |
 |--|--|
 | VistaRegistro | Vista donde se podrá registrar el usuario en la aplicación. |
-| VistaLogin | Vista donde se podrá logear el usuario en la aplicación. |
+| VistaLogin | Vista donde se podrá loguear el usuario en la aplicación. |
 | VistaChat |  Vista donde se podrá ver el chat con el que estamos hablando. |
-| VistaBandejaEntrada |  Vista donde se podrá ver los chats logeados en la aplicación. |
+| VistaBandejaEntrada |  Vista donde se podrá ver los chats logueados en la aplicación. |
 | VistaAlbumes | Vista donde se podrán crear álbumnes y poder almacenar fotos en él. |
 | VistaFotosAlbum |  Vista donde se podrán ver las fotos almacenadas en un álbum. |
-| VistaVerPerfil |  Vista donde se podrá ver los datos del usuario logeado. |
+| VistaVerPerfil |  Vista donde se podrá ver los datos del usuario logueado. |
 
 ## AUTH-BACKEND
 
@@ -25,15 +26,15 @@
 |Nombre| Descripción |
 |--|--|
 | AuthApplication | Clase que se utilizará para poner en marcha el microservicio. |
-| UserService | Clase que se utilizará para declarar los métodos que se utilizará en la clase UserController. |
+| UserService | Interfaz que se utilizará para realizar la inyección de dependencias que realiza Spring y donde se declaran los métodos que se utilizará en la clase UserController. |
 | UserController | Clase que se utilizará para realizar interacciones de usuario con el frontend y el backend. |
-| AuthService | Clase que se utilizará para declarar los métodos que se utilizará en la clase AuthController. |
+| AuthService | Interfaz que se utilizará para realizar la inyección de dependencias que realiza Spring y donde se declaran los métodos que se utilizará en la clase AuthController. |
 | AuthController | Clase que se utilizará para realizar la autenticación de un usuario. |
 | JwtConfig | Clase que se utilizará para declarar las partes que forman un Json Web Token. |
 | JwtTokenAuthenticationFilter | Clase que se utilizará para verificar la autenticación de un token. |
 | SecurityCredentialConfig | Clase que se utilizará para incluir la seguridad del token y la base de datos.|
 | JwtTokenProvider | Clase que se utilizará para generar el token y validar el secreto de éste. |
-| UserRepository | Clase que se utilizará para declarar los métodos que se utilizará en la clase UserServiceImpl. |
+| UserRepository | Interfaz que se utilizará para realizar la inyección de dependencias que realiza Spring y donde se declaran los métodos que se utilizará en la clase UserServiceImpl. |
 | User | Hace referencia a la entidad usuario. |
 | Profile | Hace referencia al perfil del usuario. |
 
@@ -44,16 +45,16 @@
 |Nombre| Descripción |
 |--|--|
 | ChatApplication | Clase que se utilizará para poner en marcha el microservicio. |
-| ChatService | Clase que se utilizará para declarar los métodos que se utilizará en la clase ChatController. |
+| ChatService | Interfaz que se utilizará para realizar la inyección de dependencias que realiza Spring y donde se declaran los métodos que se utilizará en la clase ChatController. |
 | ChatController | Clase que se utilizará para realizar interacciones de chat entre el frontend y el backend. |
 | SecurityConfig | Clase que se utilizará para incluir la configuración de CORS. |
 | WebSocketConfig | Clase que se utilizará para incluir la configuración del Web Socket.|
-| ChatMessageService | Clase que se utilizará para declarar los métodos que se utilizará en la clase ChatMessageServiceImpl. |
+| ChatMessageService | Interfaz que se utilizará para realizar la inyección de dependencias que realiza Spring y donde se declaran los métodos que se utilizará en la clase ChatMessageServiceImpl. |
 | ChatMessageServiceImpl | Clase que se utilizará para el envío de mensajes. |
-| ChatRoomService | Clase que se utilizará para declarar los métodos que se utilizará en la clase ChatRoomServiceImpl.|
+| ChatRoomService | Interfaz que se utilizará para realizar la inyección de dependencias que realiza Spring y donde se declaran los métodos que se utilizará en la clase ChatRoomServiceImpl.|
 | ChatRoomServiceImpl | Clase que se utilizará para la creación de múltiples chats. |
-| ChatMessageRepository | Clase que se utilizará para declarar los métodos que se utilizará en la clase ChatMessageServiceImpl. |
-| ChatRoomRepository | Clase que se utilizará para declarar los métodos que se utilizará en la clase ChatRoomServiceImpl. |
+| ChatMessageRepository | Interfaz que se utilizará para realizar la inyección de dependencias que realiza Spring y donde se declaran los métodos que se utilizará en la clase ChatMessageServiceImpl. |
+| ChatRoomRepository | Interfaz que se utilizará para realizar la inyección de dependencias que realiza Spring y donde se declaran los métodos que se utilizará en la clase ChatRoomServiceImpl. |
 | ChatMessage | Hace referencia a los mensajes de chat. |
 | ChatNofication | Hace referencia a las notificaciones de chat. |
 | ChatRoom | Hace referencia a la sala de chat con un usuario. |
