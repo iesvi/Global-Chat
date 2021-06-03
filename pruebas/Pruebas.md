@@ -10,7 +10,7 @@
 - [Usuario guardados en la base de datos.](#usuarios-bd)
 - [Accediendo a una URL no permitida.](#accediendo-a-una-url-no-permitida)
 
-En esta parte de la documentación realizaré pruebas sobre la aplicación. En este enlace se puede ver un videotutorial en el que se explica cómo funciona la aplicación y se puede ver como funciona estando desplegada.
+En esta parte de la documentación realizaré pruebas sobre la aplicación. En este [enlace](https://www.youtube.com/watch?v=pwaPw9QoDlc) se puede ver un videotutorial en el que se explica cómo funciona la aplicación y se puede ver como funciona estando desplegada.
 
 ## Log
 
