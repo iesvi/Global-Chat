@@ -7,6 +7,7 @@
 - IniciarSesión 
 - CerrarSesión 
 - ConsultarDatosUsuario 
+- CrearAlbum
 - RecuperarContraseña 
 
 ## Gestión de chat:
@@ -32,7 +33,7 @@
  
 ## Gestión de seguridad
 
- - Session Timeout: Cuando se deje de utilizar la aplicación por un tiempo ésta mostrara un ventana para seguir logeado o deslogearse. Si no se selecciona alguna opción en un tiempo determinado la aplicación deslogeará al usuario.
+ - Session Timeout: Cuando se deje de utilizar la aplicación por un tiempo ésta mostrara un ventana para seguir logueado o desloguearse. Si no se selecciona alguna opción en un tiempo determinado la aplicación deslogueará al usuario.
  - Protección Contra Ataques SQL Inyection: Evita que un atacante pueda realizar consultas SQL que perjudiquen nuestra aplicación.
  - JWT (Json Web Token): Se define un mecanismo para poder propagar entre dos partes, y de forma segura, la identidad de un determinado usuario, además con una serie de claims o privilegios. Estos privilegios están codificados en objetos de tipo JSON, que se incrustan dentro de del payload o cuerpo de un mensaje que va firmado digitalmente.
 
@@ -46,7 +47,11 @@
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/analisis/img/diagrama%20de%20caso%20de%20uso%20-%20chat.png)
 
-# Análisis de requisitos Gestión de usuario
+# Análisis de requisitos 
+
+## Gestión de usuario
+
+***La gestión de usuario va a tratar toda la parte de autenticación, visualización de usuario y la gestión de álbumes.***
 
 |Nombre |Registrarse |
 | - | - |
@@ -85,13 +90,23 @@
 |Descripción |El usuario selecciona la opción de consultar los datos de la cuenta y el sistema mostrará los datos del usuario. |
 |Actores |Usuario |
 |Precondiciones |Ninguna. |
-|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona ver los datos de la cuenta. </p><p>3. El sistema muestra los datos del usuario en el que se encuentra logeado. </p>|
+|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona ver los datos de la cuenta. </p><p>3. El sistema muestra los datos del usuario en el que se encuentra logueado. </p>|
+|Postcondiciones |Ninguna. |
+|Alternativas/Excepciones |Ninguna.|
+
+|Nombre |CrearAlbum |
+| - | - |
+|ID: |CU-6 |
+|Descripción |El usuario selecciona la opción de crear álbum y el sistema creará un álbum con el nombre indicado previamente. |
+|Actores |Usuario |
+|Precondiciones |Ninguna. |
+|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona acceder a la sección de álbumes. </p><p>3. El sistema muestra todos los álbumes actualmente creados. </p><p>4. El usuario introduce el nombre del álbum a crear.</p><p>5. El sistema crea un álbum con el nombre introducido.</p>|
 |Postcondiciones |Ninguna. |
 |Alternativas/Excepciones |Ninguna.|
 
 |Nombre |RecuperarContraseña |
 | - | - |
-|ID: |CU-6 |
+|ID: |CU-7 |
 |Descripción |El usuario selecciona la opción de recuperar la contraseña y el sistema, introduce su número de teléfono y si el teléfono coincide con algún registro de la base de datos le enviará la contraseña por SMS a su teléfono. |
 |Actores |Usuario |
 |Precondiciones |El usuario debe estar registrado en la base de datos. |
@@ -99,9 +114,13 @@
 |Postcondiciones |El usuario podrá volver a entrar a la aplicación con su usuario y contraseña. |
 |Alternativas/Excepciones |<p>**Alternativa 1:** </p><p>3.1 El sistema muestra que no encontró ninguna cuenta asociada a ese número.</p><p>3.2 El sistema vuelve a pedir al usuario que introduzca un número de teléfono válido.</p>|
 
+## Gestión de chat
+
+***La gestión de chat va a tratar todo lo relacionado con la mensajería.***
+
 |Nombre |EnviarMensaje|
 | - | - |
-|ID: |CU-7|
+|ID: |CU-8|
 |Descripción |El usuario rellenará el recuadro para escribir el mensaje y le dará al botón de enviar mensaje.|
 |Actores |Usuario|
 |Precondiciones |Debe escribir algo antes de enviar el mensaje.|
@@ -111,7 +130,7 @@
 
 |Nombre |VerMensajesRecibidos|
 | - | - |
-|ID: |CU-8 |
+|ID: |CU-9 |
 |Descripción |El usuario selecciona el usuario con el que quiere visualizar los mensajes recibidos. |
 |Actores |Usuario |
 |Precondiciones |Ninguna. |
