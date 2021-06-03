@@ -1,6 +1,7 @@
 
 
 
+
 # Codificación del proyecto
 En este documento se va explicar todos los casos de uso, acompañados del código más significativo que los implementa al igual que como funciona la interfaz gráfica.
 
@@ -140,6 +141,8 @@ Se inserta el objeto en la base de datos usando la clase registerUser y donde la
 
 ## Iniciar Sesión
 
+### Inicio de sesión normal:
+
 Una vez que el usuario se ha registrado podrá introducir sus datos.
 
 ![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/loginCU.PNG)
@@ -171,6 +174,39 @@ El método generateToken será el encargado de generar el token de autenticació
     @Override protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException { // 1.Obtenemos el header del token de autenticación String header = request.getHeader(jwtConfig.getHeader()); // 2.Validamos el header if (header == null || !header.startsWith(jwtConfig.getPrefix())) { chain.doFilter(request, response); // Si no es válido, se slata al siguiente filtro return; } // 3.Obtenemos el token String token = header.replace(jwtConfig.getPrefix(), ""); if (tokenProvider.validateToken(token)) { Claims claims = tokenProvider.getClaimsFromJWT(token); String username = claims.getSubject(); UsernamePasswordAuthenticationToken auth = userService.findByUsername(username) .map(InstaUserDetails::new) .map(userDetails -> { UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken( userDetails, null, userDetails.getAuthorities()); authentication .setDetails(new WebAuthenticationDetailsSource().buildDetails(request)); return authentication; }) .orElse(null); SecurityContextHolder.getContext().setAuthentication(auth); } else { SecurityContextHolder.clearContext(); } chain.doFilter(request, response); }
 
 Y con ayuda del método doFilterInternal validamos el token, incluido el payload con los datos de la base de datos.
+
+### Inicio de sesión con Firebase:
+
+Y ahora explicaremos como poder iniciar sesión con Firebase.
+
+**AuthController.java**
+
+    @PostMapping("/facebook/signin") public  ResponseEntity<?> facebookAuth(@Valid @RequestBody FacebookLoginRequest facebookLoginRequest) { log.info("Facebook login {}", facebookLoginRequest); String token = facebookService.loginUser(facebookLoginRequest.getAccessToken()); return ResponseEntity.ok(new JwtAuthenticationResponse(token)); }
+
+Se crea un punto de entrada donde se recibirá el token de autenticación del usuario y si éste es correcto y no ha sido manipulado, obtendrá un login exitoso.
+
+**FacebookService.java**
+
+    public String loginUser(String fbAccessToken) { FacebookUser facebookUser = facebookClient.getUser(fbAccessToken); return userService.findById(facebookUser.getId()) .or(() -> Optional.ofNullable(userService.registerUser(convertTo(facebookUser), Role.FACEBOOK_USER))) .map(InstaUserDetails::new) .map(userDetails -> new UsernamePasswordAuthenticationToken( userDetails, null, userDetails.getAuthorities())) .map(tokenProvider::generateToken) .orElseThrow(() -> new InternalServerException("Imposible iniciar sesión el el ID de usuario " + facebookUser.getId())); }
+
+Con el método loginUser se encargará de devolver el token de autenticación para el usuario. Y para generar ese token se ha hecho uso de la clase **JwtTokenProvider**.
+
+Y cuando el Backend mande el token de autenticación a través del método de la clase **AuthController.js**:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/facebookBack.PNG)
+
+El Frontend se encargará de recogerlo con el método de **ApiUtils.js**:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/facebookFront.PNG)
+
+Y se encargará de iniciar sesión con Firebase mediante el método `const  provider  =  new  firebase.auth.GoogleAuthProvider()` y finalizando con `firebase.auth().signInWithPopup(provider) .then(login) .catch(console.error("Error. No se puedo iniciar sesión."))` iniciando sesión si todo fue bien ó si hubo algún error, mostraría un mensaje de error:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/loginFirebase.PNG)
+
+La configuración de mi proyecto de firebase es la siguiente:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/credenciales.PNG)
+
 
 ## Cerrar Sesión
 
