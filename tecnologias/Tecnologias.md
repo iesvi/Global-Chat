@@ -4,17 +4,18 @@
 A continuación se describen las tecnologías que han sido usadas para el desarrollo de la aplicación:
 
 ## Spring
-![Spring Framework Desarrolla Aplicaciones de Java Robustas)](https://programaenlinea.net/wp-content/uploads/2018/08/spring-frameworks.png)
+![️Spring](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/spring.png)
+
 **Spring** es un framework de código abierto para la creación de aplicaciones empresariales Java, con soporte para Groovy y Kotlin. Tiene una estructura modular y una gran flexibilidad para implementar diferentes tipos de arquitectura según las necesidades de la aplicación.
 
 Ha sido utilizado para crear la lógica de la aplicación, es decir, el **Backend**.
 
 ## MongoDB
-![️ Instalar y configurar MongoDB en Ubuntu 16.04 | Agilia Center](https://www.agiliacenter.com/wp-content/uploads/2017/04/mongo-db-logo.png)
+![️Mongo DB](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/mongodb.png)
 
 **MongoDB** (del inglés humongous, "enorme") es un sistema de base de datos NoSQL, orientado a documentos y de código abierto.  En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida. 
 
-MongoDB será la base de datos utilizada para almacenar los datos de la aplicación. Esta base de datos es muy fácil de crear mediante la utilización de Docker donde ésta correrá. Para crearla utilicé el comando "docker run -p 27017:27017 bitnami/mongodb" en el CMD de Windows.
+MongoDB será la base de datos utilizada para almacenar los datos de la aplicación. Esta base de datos es muy fácil de crear mediante la utilización de Docker donde ésta correrá. Para crearla se utilizó el comando "docker run -p 27017:27017 bitnami/mongodb" en el CMD de Windows.
 
 
 ## Docker
@@ -22,10 +23,10 @@ MongoDB será la base de datos utilizada para almacenar los datos de la aplicaci
 
 **Docker** es un proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.
 
-Gracias a Docker podremos correr en contenedores, que para haceros una idea son como máquinas virtuales donde estarán la base de datos y el servidor de Jenkins.
+Gracias a Docker podremos correr en contenedores, que para haceros una idea son como máquinas virtuales donde en una de ellas se alojará la base de datos de MongoDB para almacenar los datos de la aplicación y en otra, el servidor de Jenkins para realizar la integración continua de ésta misma.
 
 ## Jenkins
-![Archivo:Jenkins logo with title.svg - Wikipedia, la enciclopedia libre](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Jenkins_logo_with_title.svg/1280px-Jenkins_logo_with_title.svg.png)
+![️Jenkins](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/jenkins.png)
 
 **Jenkins** CI no es más que un sistema desplegado en un servidor que nos ayuda en la tarea de hacer integración continua y programar tareas automáticas cuando ocurra una determinada acción. A este tipo de servicios se los conoce como CI/CD (Coninuous integration / Continuous deploy).
 
@@ -33,7 +34,7 @@ La integración continua es una práctica de desarrollo de software, en la cual 
 
 Es decir, la integración continua es una manera de automatizar tareas cuando se sube el código, aunque también se puede utilizar para desplegar las aplicaciones. En un repositorio compartido viene bien utilizar un herramienta de integración continua para mantaner una integridad en el código.
 
-Jenkins nos servirá de gran ayuda para realizar la integración continua de nuestra aplicación.
+Jenkins nos será de gran ayuda para realizar la integración continua de nuestra aplicación, para finalmente poder recoger nuestros microservicios en contenedores y poder tenerlos listos de una manera más sencilla sin tener que desplegar la aplicación a mano.
 
 ## React
 ![Creación de aplicaciones React "The Agile Way"](https://i.blogs.es/3cc483/1-hsisluifmo6kblfpoktlow/450_1000.jpeg)
@@ -43,8 +44,7 @@ Jenkins nos servirá de gran ayuda para realizar la integración continua de nue
 Gracias a React se realizo el desarrollo del Frontend de la aplicación.
 
 ## Node.Js
-
-![Primeros pasos para crear un API REST con Node.js](http://xurxodev.com/content/images/2015/12/Node-js-Logo.png)
+![️Node JS](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/nodejs.png)
 
 Para instalar los paquetes necesarios de React, se usará Node.JS, un gestor de paquetes que nos permite, además de descargar e instalar paquetes, crear un fichero de dependencias llamado **package.json**, en el que se guarde una referencia a todos los paquetes que se han instalado en nuestro entorno de trabajo. De esta forma podremos mover el código de React sin necesidad de arrastrar con él la carpeta **node_modules**, que es donde se almacenan todos estos paquetes instalados.
 
@@ -57,13 +57,13 @@ Y con el comando:
 
     npm install
 
-Podremos instalar todas las dependecias del fichero **package.json** y reconstruir la carpeta **node_modules**.
+Podremos instalar todas las dependencias del fichero **package.json** y reconstruir la carpeta **node_modules**.
 Se muestra una captura de las dependencias usadas en el proyecto:
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/dependencias.PNG)
 
 ## Firebase
-![A Quick Dive Into Firebae (Firebase) - DEV Community](https://res.cloudinary.com/practicaldev/image/fetch/s--XnV7nLnZ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/cufhvx44o66bb32ll2l8.png)
+![️Firebase](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/firebase.png)
 
 **Firebase** es una plataforma para el desarrollo de aplicaciones web y aplicaciones móviles lanzada en 2011 y adquirida por Google en 2014.
 
@@ -83,6 +83,9 @@ Los microservicios utilizados en la aplicación son:
 
  - Auth.
  - Chat.
+ - Cloud Config.
+ - Service Discovery.
+ - Gateway.
 
 ## Json Web Token 
 ![JSON Web Tokens - jwt.io](http://jwt.io/img/logo-asset.svg)
@@ -148,36 +151,42 @@ Como hemos visto, JWT no es un estándar de autenticación, sino que simplemente
 
 ![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/jwt.PNG)
 
-Comenzaríamos desde el cliente, haciendo una petición POST para enviar el usuario y contraseña, y realizar el proceso de login.
+ 1. Comenzaríamos desde el cliente, haciendo una petición POST para enviar el usuario y contraseña, y realizar el proceso de login.
 
-Se comprobaría que ese usuario y su contraseña son correctos, y de serlos, generar el token JWT para devolverlo al usuario.
+ 2. Se comprobaría que ese usuario y su contraseña son correctos, y de serlos, generar el token JWT para devolverlo al usuario.
 
-A partir de ahí la aplicación cliente, con ese token, haría peticiones solicitando recursos, siempre con ese token JWT dentro de un encabezado, que sería Authorization: Bearer XXXXXXX, siendo Bearer el tipo de prefijo seguido de todo el contenido del token.
+ 3. A partir de ahí la aplicación cliente, con ese token, haría peticiones solicitando recursos, siempre con ese token JWT dentro de un encabezado, que sería Authorization: Bearer XXXXXXX, siendo Bearer el tipo de prefijo seguido de todo el contenido del token.
 
-En el servidor se comprobaría el token mediante la firma, para verificar que el token es seguro, y, por tanto, podemos confiar en el usuario.
+ 4. En el servidor se comprobaría el token mediante la firma, para verificar que el token es seguro, y, por tanto, podemos confiar en el usuario.
 
-Dentro del cuerpo del token, además, tenemos los datos de quién es el usuario que ha realizado esa petición, porque podemos contener en el payload todos los datos de usuario que queramos.
+ 5. Dentro del cuerpo del token, además, tenemos los datos de quién es el usuario que ha realizado esa petición, porque podemos contener en el payload todos los datos de usuario que queramos.
 
-Tras verificar que el token es correcto y saber quién es el que ha hecho la petición, podemos aplicar entonces el mecanismo de control de acceso, saber si puede acceder o no, y si es así, responder con el recurso protegido, de manera que lo podría recibir de una forma correcta.
+ 6. Tras verificar que el token es correcto y saber quién es el que ha hecho la petición, podemos aplicar entonces el mecanismo de control de acceso, saber si puede acceder o no, y si es así, responder con el recurso protegido, de manera que lo podría recibir de una forma correcta.
 
 De esta forma podríamos  **implementar el proceso de autenticación**, y hacerlo, además, con estos JSON Web Token.
 
 ## Web Sockets
-![Websockets en el IDE Arduino para el esp8266 - Multicóptero X](https://lh3.googleusercontent.com/proxy/GeR-0m_VVxR_768KA8-OVPYzJ8wH-5JsB0f_wdX-Eccl_UnyMkGUn1o6ZwgZ_lyiskUkiXOd9kMYcibImCgvP-zYyTMd5cHeH7i9ADMQDsciqcGOk2TjdcHxbmI)
+![️HTTP vs WebSocket](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/httpvswebsocket.png)
 
-Un **WebSocket** es un protocolo que permite una comunicación bidireccional entre el servidor y el cliente.
+### ¿Qué diferencia hay entre HTTP y WebSocket?
 
-A diferencia de HTTP, un protocolo de capa de aplicación, WebSocket es un protocolo de capa de transporte (TCP). Sin embargo, HTTP se usa para el protocolo de enlace inicial, luego se actualiza a la conexión TCP que usa WebSockets.
+### Comunicación
 
-WebSockets es un protocolo de bajo nivel, que define la forma de transferir mensajes sin información adicional sobre los mensajes entrantes.
+Con WebSockets envías al servidor mensajes de cadenas simple con datos, y el servidor procesa los datos y las respuestas. La comunicación es más eficiente que HTTP si nos centramos en el tamaño del mensaje, y en la velocidad, especialmente para mensajes de gran tamaño, ya que en HTTP, por ejemplo, tienes que enviar los  _headers_  en cada petición. Esto suma  _bytes_. Además en REST, tienes los recursos en URLs y métodos de HTTP. Lo que significa que para cada petición, obtienes una respuesta.
 
-Por esta razón, el WebSocket RFC define el uso de subprotocolos para definir la estructura y los estándares de los mensajes. Usaremos STOMP como subprotocolo sobre WebSockets.
+Puede ser buena idea observar los  _benchmarkings_  realizados por  David Luecke  para comparar el rendimiento de  [HTTP vs WebSockets](https://blog.feathersjs.com/http-vs-websockets-a-performance-comparison-da2533f13a77). Verás que para más de 50 peticiones concurrentes, ¡Websockets pueden ser el 50% más rápidos que HTTP! Esto significa que en muchos casos y según las necesidades de tu proyecto, WebSockets pueden ser más rápidos que las APIs de HTTP tradicionales.
+
+### Stateless vs Stateful
+
+Otra de las diferencias más importantes  entre los dos, es que que WebSockets son protocolos  _stateful_, mientras las conexiones HTTP son  _stateless_. Esto quiere decir que WebSockets crean una conexión que se mantiene viva en el servidor hasta que el socket se cierre y se intercambian los mensajes de forma bidireccional. Mientras que en las conexiones HTTP, en que una petición significa una respuesta - válida o no -, el acceso desde diferentes servidores no interrumpe su funcionamiento, donde es ideal, por ejemplo para microservicios. Pues, cualquier servidor puede gestionar cualquier petición y no es necesario sincronizar cualquiera de los estados compartidos, excepto la base de datos.
+
+Usaremos STOMP como subprotocolo sobre WebSockets.
 
 El Protocolo de mensajes orientado a texto (STOMP) simple (o de transmisión continua) define un protocolo para que el servidor y el cliente se comuniquen con la mensajería.
 
 ## Kali Linux
-![Linux: Kali 2019.4 ya disponible, con nuevo entorno de escritorio y modo  undercover](https://i.blogs.es/13bb67/kali-linux/1366_521.png)
+![️Kali Linux](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/tecnologias/img/kalilinux.png)
 
 **Kali Linux** es una distribución basada en [Debian GNU/Linux](https://es.wikipedia.org/wiki/Debian_GNU/Linux "Debian GNU/Linux") diseñada principalmente para la auditoría y [seguridad informática](https://es.wikipedia.org/wiki/Seguridad_inform%C3%A1tica "Seguridad informática") en general. Fue fundada y es mantenida por Offensive Security Ltd. Mati Aharoni y Devon Kearns, ambos pertenecientes al equipo de Offensive Security, desarrollaron la distribución a partir de la reescritura de [BackTrack](https://es.wikipedia.org/wiki/BackTrack), que se podría denominar como la antecesora de Kali Linux.
 
-Con **Kali Linux** realizaré pruebas de penetración en la aplicación para probar que la seguridad añadida a la aplicación hace su función.
+Con **Kali Linux** se realizarán pruebas de penetración en la aplicación para probar que la seguridad añadida a la aplicación hace su función.
