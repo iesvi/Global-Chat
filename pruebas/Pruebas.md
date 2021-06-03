@@ -4,9 +4,9 @@
 
 **Índice:**
 
-1. [Recoger log en archivos de texto.](#log)
+1. [Recoger log en archivos de texto.](##log)
 2. [Crear álbum e introducir imágenes en él.](#álbum-firebase)
-3. [Seguridad contra SQL Injection usando Kali Linux.](#seguridad)
+3. [Seguridad contra SQL Injection usando Kali Linux.](#seguridad-contra-sql-inyection-usando-kali-linux)
 4. [Usuario guardados en la base de datos.](#usuarios-bd)
 5. [Accediendo a una URL no permitida.](#accediendo-a-una-url-no-permitida)
 
@@ -42,7 +42,7 @@ Cabe aclarar que para poder subir fotos a la Firestore Database de Firebase hay 
 
 ![2021-06-01 20-15-54](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/pruebas/img/reglasStorage.PNG)
 
-## Seguridad
+## Seguridad contra SQL Injection usando Kali Linux
 
 Para probar la seguridad de la aplicación contra ataques de SQL Injection (Inyección SQL) que es un conocido ataque que se realiza en páginas web para ver si son vulnerables y poder así obtener información valiosa de ella, como por ejemplo, correos, contraseñas...
 
