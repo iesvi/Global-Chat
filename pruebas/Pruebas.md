@@ -4,7 +4,7 @@
 
 **Índice:**
 
-- [Recoger log en archivos de texto.](##log)
+- [Recoger log en archivos de texto.](#log)
 - [Crear álbum e introducir imágenes en él.](#álbum-firebase)
 - [Seguridad contra SQL Injection usando Kali Linux.](#seguridad)
 - [Usuario guardados en la base de datos.](#usuarios-bd)
