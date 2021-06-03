@@ -1,5 +1,6 @@
 
 
+
 # Codificación del proyecto
 En este documento se va explicar todos los casos de uso, acompañados del código más significativo que los implementa al igual que como funciona la interfaz gráfica.
 
@@ -370,13 +371,13 @@ Para aumentar la seguridad se ha añadido un session timeout a la aplicación, e
 
 ![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/sessionTimeout.PNG)
 
-Si el usuario elige "Mantenerme Conectado" esta pestaña se cerrará y podrá seguir continuando utilizando la aplicación. En cambio si elige "Logout" o simplemente no elige nada en un tiempo, será deslogeado de la aplicación automáticamente y debe volver a iniciar sesión para poder entrar a su cuenta.
+Si el usuario elige "Mantenerme Conectado" esta pestaña se cerrará y podrá seguir continuando utilizando la aplicación. En cambio si elige "Logout" o simplemente no elige nada en un tiempo, será deslogueado de la aplicación automáticamente y debe volver a iniciar sesión para poder entrar a su cuenta.
 
 ![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/codigoSessionTimeout.PNG)
 
-El método **onIdle** es el que se encarga de deslogear al usuario si éste no elige ninguna opción en la pestaña.
+El método **onIdle** es el que se encarga de desloguear al usuario si éste no elige ninguna opción en la pestaña.
 El método **stayActive** lo único que hace es cerrar la pestaña si se mantiene la sesión abierta con setModalIsOpen(false).
-Y el método **logOut** deslogea al usuario limpiando así su token de acceso para que tenga que volver a iniciar sesión en la aplicación.
+Y el método **logOut** desloguea al usuario limpiando así su token de acceso para que tenga que volver a iniciar sesión en la aplicación.
 
 ## Gestión Errores
 
