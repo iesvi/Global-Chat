@@ -1,3 +1,4 @@
+
 # Entorno de desarrollo
 
 Para el desarrollo de la aplicación se ha usado el IDE Intellij + Maven y Java. Lo proyectos han sido creados en la página web [**Spring Initializr**](https://start.spring.io/), que permite configurar un proyecto Maven con dependencias de Spring deseadas. Al descargar el proyecto, se puede importar desde Intellij y ya tendríamos el proyecto listo para comenzar a trabajar.  
@@ -40,6 +41,36 @@ En la imagen de arriba se muestra la configuración y las dependencias utilizada
 
 Y para el microservicio de chat se ha utilizado la siguiente configuración y las siguiente dependencias.
 
+## Configuración IDE
 
+La configuración del IDE que he utilizado para desarrollar los microservicios son ambas la misma, por lo que se debe configurar en ambos lados de igual forma:
 
+1. Debemos dirigirnos a **File -> Project Structure -> Project**
 
+	 - El SDK utilizado es: **coretto- 15 Amazon Corretto version 15.0.2**
+
+	- Y como nivel de lenguaje: **15 - Text blocks**
+
+![IMG CHAT](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/entornoDesarrollo/img/project.PNG)
+
+2. En la misma pestaña nos dirigimos a **Modules.**
+
+	-	Como nivel de lenguaje elegimos: **10 - Local variable type inference**
+
+![IMG CHAT](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/entornoDesarrollo/img/modules.PNG)
+
+3. Y lo último de esta pestaña, nos dirigimos a **Platform Settings -> SDKs**.
+
+	-	E indicamos el path del JDK de Java, en mi caso lo tengo es esta dirección: **C:\Program Files\Java\jdk1.8.0_271**
+
+![IMG CHAT](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/entornoDesarrollo/img/sdk.PNG)
+
+Seguidamente le dariamos a **Apply** y aplicaríamos los cambios.
+
+Y para terminar de configurar el proyecto, nos dirigimos a **File -> Settings -> Build, Execution, Deployment -> Compiler -> Java Compiler**
+
+ - E indicamos en **Target bytecode version** la versión **10**.
+
+![IMG CHAT](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/entornoDesarrollo/img/javacompiler.PNG)
+
+E igual que lo que hicimos anteriormente, guardamos los cambios pulsando **Apply**.
