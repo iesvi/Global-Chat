@@ -4,11 +4,11 @@
 
 **Índice:**
 
-1. [Recoger log en archivos de texto.](##log)
-2. [Crear álbum e introducir imágenes en él.](#álbum-firebase)
-3. [Seguridad contra SQL Injection usando Kali Linux.](#seguridad)
-4. [Usuario guardados en la base de datos.](#usuarios-bd)
-5. [Accediendo a una URL no permitida.](#accediendo-a-una-url-no-permitida)
+- [Recoger log en archivos de texto.](##log)
+- [Crear álbum e introducir imágenes en él.](#álbum-firebase)
+- [Seguridad contra SQL Injection usando Kali Linux.](#seguridad)
+- [Usuario guardados en la base de datos.](#usuarios-bd)
+- [Accediendo a una URL no permitida.](#accediendo-a-una-url-no-permitida)
 
 En esta parte de la documentación realizaré pruebas sobre la aplicación. En este enlace se puede ver un videotutorial en el que se explica cómo funciona la aplicación y se puede ver como funciona estando desplegada.
 
