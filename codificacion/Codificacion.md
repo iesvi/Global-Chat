@@ -1,4 +1,5 @@
 
+
 # Codificación del proyecto
 En este documento se va explicar todos los casos de uso, acompañados del código más significativo que los implementa al igual que como funciona la interfaz gráfica.
 
@@ -39,9 +40,13 @@ Y de igual forma, en su interior encontramos las siguientes [clases](https://git
 
 ![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/paqueteChatAbierto.PNG)
 
+### Controladores:
+ 
 Siguiendo con la explicación de como funcionan los microservicios, las peticiones son recibidas por los controladores, mediante las anotaciones **@RequestMapping**,**@GetMapping** y **@PostMapping**.
 
 ![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/controllerUser.PNG)
+
+### MongoDB:
 
 Las operaciones relacionadas con la base de datos se realizan usando una interfaz **NombreRepository** que extiende de **MongoRepository** y declarada como componente  **Repository** usando la anotación **@Repository**. MongoRepository es una interfaz que nos permite realiazar múltiples operaciones con una base de datos MongoDB. Algunas de estas operaciones están ya definidase en MongoRepository y otras sólo tenemos que declararlas como métodos en nuestra interfaz _NombreRepository_ utilizando palabras claves que, Spring interpretará generando los métodos automaticamente. Un ejemplo sería para buscar cualquier objeto a partir de un atributo de su clase, basta con definir un método tal que así: `Object findByAtributo(TipoAtributo valor)` y nos devolverá el primer objeto que encuentre en la base de datos con un atributo que tenga el valor parametrizado.  
 
@@ -52,6 +57,8 @@ Para poder usar la interfaz **NombreRepository**, tenemos que indicarle el tipo 
 Ahí escribiremos el nombre de la clase que se guardará en la base de datos, y el tipo de dato del atributo que funciona como identificador de cada objeto. Para indicar cual es el atributo que identifica a casa objeto de la clase de forma inequívoca, se usa la anotación **@Id**. Si declaramos este atributo como un tipo String, podremos guardar objetos donde el atributo esté vacío **(sólo si el atributo id es de tipo String)**, ya que MongoDB generará automáticamente un id aleatorio al insertar el documento en la base de datos. Además del id, tendremos que indicar a Spring cuál es la clase que se va a guardar en la base de datos usando la anotación **@Document**, ya que Spring es quién se encargará de hacer las conversiones de clase Java, a documento de MongoDB, cada vez que guardemos o recuperemos datos.
 
 ![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/modelUser.PNG)
+
+### Service:
 
 Por último, en el paquete service se crean los servicios, que son declarado como componente **Service** usando la anotación **@Service** y es donde se desarrolla la lógica de negocio del microservicio. 
  
@@ -71,7 +78,35 @@ El usuario obtiene una vista de registro para completar con sus datos.
 
 **AuthController.java**
 
-    @PostMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE) public ResponseEntity<?> createUser(@Valid @RequestBody SignUpRequest payload) { log.info("Creando usuario {}", payload.getUsername()); User user = User .builder() .username(payload.getUsername()) .email(payload.getEmail()) .password(payload.getPassword()) .userProfile(Profile .builder() .displayName(payload.getName()) .profilePictureUrl(payload.getProfilePicUrl()) .build()) .build(); try { userService.registerUser(user, Role.USER); } catch (UsernameAlreadyExistsException | EmailAlreadyExistsException e) { throw new BadRequestException(e.getMessage()); } URI location = ServletUriComponentsBuilder .fromCurrentContextPath().path("/users/{username}") .buildAndExpand(user.getUsername()).toUri(); return ResponseEntity .created(location) .body(new ApiResponse(true,"Usuario registrado correctamente.")); }
+    @PostMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE) 
+    public ResponseEntity<?> createUser(@Valid @RequestBody SignUpRequest payload) { 
+	    log.info("Creando usuario {}", payload.getUsername()); 
+	    
+	    User user = User.builder() 
+		    .username(payload.getUsername()) 
+		    .email(payload.getEmail()) 
+		    .password(payload.getPassword()) 
+		    .userProfile(Profile .builder() 
+		    .displayName(payload.getName()) 
+		    .profilePictureUrl(payload.getProfilePicUrl()) 
+		    .build()) 
+		    .build(); 
+		 try { 
+			 userService.registerUser(user, Role.USER); 
+		 } catch (UsernameAlreadyExistsException | EmailAlreadyExistsException e) { 
+			 throw new BadRequestException(e.getMessage()); 
+		 } 
+		 
+		 URI location = ServletUriComponentsBuilder 		
+			 .fromCurrentContextPath().path("/users/{username}") 	
+			 .buildAndExpand(user.getUsername())
+			 .toUri(); 
+			 
+		return ResponseEntity 
+				.created(location) 
+				.body(new ApiResponse(true,"Usuario registrado correctamente.")); 
+	}
+
 
 Se crea un punto de entrada donde se recibirá el objeto User, éste será creado mediante el patrón builder y se inserta toda la información en el payload, es decir, en la segunda parte del Json Web Token donde se guarda la información. Si el usuario el registrado correctamente devolverá un mensaje que se mostrará en el Frontend como que se ha registrado con éxito, de lo contrario le saltará un error.
 
@@ -79,7 +114,26 @@ Se crea un punto de entrada donde se recibirá el objeto User, éste será cread
 
 **UserService.java**
 
-    public User registerUser(User user, Role role) { log.info("Registrando al usuario {}", user.getUsername()); if (userRepository.existsByUsername(user.getUsername())) { log.warn("El usuario {} ya existe.", user.getUsername()); throw new UsernameAlreadyExistsException( String.format("El usuario %s ya existe.", user.getUsername())); } if (userRepository.existsByEmail(user.getEmail())) { log.warn("El E-Mail {} ya existe.", user.getEmail()); throw new EmailAlreadyExistsException( String.format("El E-mail %s ya existe.", user.getEmail())); } user.setPassword(passwordEncoder.encode(user.getPassword())); user.setRoles(new HashSet<>() {{ add(role); }}); return userRepository.save(user); }
+    public User registerUser(User user, Role role) { 
+    log.info("Registrando al usuario {}", user.getUsername()); 
+    
+	    if (userRepository.existsByUsername(user.getUsername())) { 
+		    log.warn("El usuario {} ya existe.", user.getUsername()); 
+		    throw new UsernameAlreadyExistsException(String.format("El usuario %s ya existe.", user.getUsername())); 
+	    } 
+    
+	    if (userRepository.existsByEmail(user.getEmail())) { 
+		    log.warn("El E-Mail {} ya existe.", user.getEmail()); 
+		    throw new EmailAlreadyExistsException(String.format("El E-mail %s ya existe.", user.getEmail())); 
+	    } 
+    
+	    user.setPassword(passwordEncoder.encode(user.getPassword())); 
+	    user.setRoles(new HashSet<>() {{ 
+		    add(role); 
+		}}); 
+		
+	    return userRepository.save(user); 
+    }
 
 Se inserta el objeto en la base de datos usando la clase registerUser y donde la contraseña irá cifrada para que ésta no pueda ser visible.
 
@@ -180,7 +234,32 @@ Se ha creado una clase con nombre WebSocketConfig con las anotaciones @Configura
 
 **WebSocketConfig.java**
 
-    @Configuration @EnableWebSocketMessageBroker public class WebSocketConfig implements WebSocketMessageBrokerConfigurer { @Override public void configureMessageBroker(MessageBrokerRegistry config) { config.enableSimpleBroker( "/user"); config.setApplicationDestinationPrefixes("/app"); config.setUserDestinationPrefix("/user"); } @Override public void registerStompEndpoints(StompEndpointRegistry registry) { registry .addEndpoint("/ws") .setAllowedOrigins("*") .withSockJS(); } @Override public boolean configureMessageConverters(List<MessageConverter> messageConverters) { DefaultContentTypeResolver resolver = new DefaultContentTypeResolver(); resolver.setDefaultMimeType(MimeTypeUtils.APPLICATION_JSON); MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter(); converter.setObjectMapper(new ObjectMapper()); converter.setContentTypeResolver(resolver); messageConverters.add(converter); return false; } }
+    @Configuration 
+    @EnableWebSocketMessageBroker 
+    public class WebSocketConfig implements WebSocketMessageBrokerConfigurer { 
+    
+	    @Override public void configureMessageBroker(MessageBrokerRegistry config) {
+		     config.enableSimpleBroker( "/user"); 
+		     config.setApplicationDestinationPrefixes("/app"); 
+		     config.setUserDestinationPrefix("/user"); 
+	     } 
+	     
+	     @Override public void registerStompEndpoints(StompEndpointRegistry registry) { 
+		     registry.addEndpoint("/ws").setAllowedOrigins("*").withSockJS(); 
+	     } 
+	    
+	     @Override public boolean configureMessageConverters(List<MessageConverter> messageConverters) { 
+		     DefaultContentTypeResolver resolver = new DefaultContentTypeResolver();
+		     resolver.setDefaultMimeType(MimeTypeUtils.APPLICATION_JSON); 
+		     
+		     MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter(); 
+		     converter.setObjectMapper(new ObjectMapper()); 
+		     converter.setContentTypeResolver(resolver); 
+		     messageConverters.add(converter); 		
+		          
+		     return false;     
+	     } 
+     }
 
 El primer método **configureMessageBroker**, configura un intermediario de mensajes en memoria simple con un destino para enviar y recibir mensajes, este destino tiene el prefijo /user, también se utiliza el prefijo /app para los mensajes que están destinados al método anotado con @MessageMapping.
 
@@ -192,7 +271,22 @@ El último método configura un conversor de mensajes JSON, que Spring utiliza p
 
 **ChatController.java**
 
-    @Controller public class ChatController { @Autowired private SimpMessagingTemplate messagingTemplate; @Autowired private ChatMessageService chatMessageService; @Autowired private ChatRoomService chatRoomService; @MessageMapping("/chat") public void processMessage(@Payload ChatMessage chatMessage) { var chatId = chatRoomService .getChatId(chatMessage.getSenderId(), chatMessage.getRecipientId(), true); chatMessage.setChatId(chatId.get()); ChatMessage saved = chatMessageService.save(chatMessage); messagingTemplate.convertAndSendToUser( chatMessage.getRecipientId(),"/queue/messages", new ChatNotification( saved.getId(), saved.getSenderId(), saved.getSenderName())); } }
+    @Controller 
+    public class ChatController { 
+    
+	    @Autowired private SimpMessagingTemplate messagingTemplate; 
+	    @Autowired private ChatMessageService chatMessageService; 
+	    @Autowired private ChatRoomService chatRoomService; 
+	    
+	    @MessageMapping("/chat") 
+	    public void processMessage(@Payload ChatMessage chatMessage) { 
+	    
+		    String chatId = chatRoomService .getChatId(chatMessage.getSenderId(), chatMessage.getRecipientId(), true); 
+		    chatMessage.setChatId(chatId.get());
+		    ChatMessage saved = chatMessageService.save(chatMessage); messagingTemplate.convertAndSendToUser( chatMessage.getRecipientId(),"/queue/messages", new ChatNotification( saved.getId(), saved.getSenderId(), saved.getSenderName())); 
+	    
+	    } 
+    }
 
 La anotación @MessageMapping asegura que si se envía un mensaje a /app/chat, el método processMessage se llama.
 
@@ -210,7 +304,7 @@ El modelo de la sala de chat se ve así:
 
 El  chatId se genera concatenando  senderId_recipientId, para cada conversación persistimos dos entradas con la misma chatId, una sala, entre remitente y destinatario y, la otra, entre destinatario y remitente, para asegurarnos de que ambos usuarios obtengan el mismo ID de chat.
 
-**Comunicación chat Frontend y Backend**
+### Comunicación chat Frontend y Backend mensaje de chat.
 
 Se usará SockJS y  Stomp.js para comunicarnos con nuestro servidor a través de STOMP sobre WebSocket.
 
@@ -223,6 +317,34 @@ El método **connect()** establece una conexión a /ws, que es donde nuestro ser
 El método **onConnect()** se conecta al destino específico del usuario, por lo que recibe todos los mensajes enviados a ese destino.
 
 Finalmente, el método sendMessage() envía un mensaje a la ruta /app/chat, ruta que se definió en la clase ChatController en el servidor.
+
+### Comunicación para acceder a los métodos del Backend desde el Frontend.
+
+Para acceder a los métodos del Backend haremos uso de la clase **ApiUtil.js** situada en el Frontend, donde se definirán los parámetros.
+
+En primer lugar declaremos dos constantes para hacer referencia al puerto en el que corre cada microservicio, siendo el 8080 para el chat y el 8081 para el auth:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/uriconexión.PNG)
+
+Seguidamente, el método request, donde se encuntra el header, que es el encargado de dar acceso al usuario cuando realiza solicutides a recursos protegidos. Además es el método encargado que nos permitirá capturar variables:
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/request.PNG)
+
+Estas variables serán capturadas mediante los métodos GET y POST, indicando además la URL que debe coincidir con la que pusimos en el Backend y el body, que recojerá el Json Web Token:
+
+Se muestra de ejemplo el método login relacionando Frontend y Backend:
+
+**Login Frontend:**
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/loginFrontend.PNG)
+
+**Login Backend:**
+
+![alt text](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/codificacion/img/loginBackend.PNG)
+
+Si observamos veremos la relación en cuanto a las URL y el método POST de ambos. 
+
+Y de igual forma funcionaría los demás métodos.
 
 ## Gestión Álbum
 
