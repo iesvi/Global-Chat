@@ -1,3 +1,4 @@
+
 # Análisis de la aplicación.
 
 ## Gestión de usuario:
@@ -114,6 +115,6 @@
 |Descripción |El usuario selecciona el usuario con el que quiere visualizar los mensajes recibidos. |
 |Actores |Usuario |
 |Precondiciones |Ninguna. |
-|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona un correo de su bandeja de entrada. </p><p>3. El sistema muestra los datos del correo. </p>|
+|Curso normal |<p>1. Include IniciarSesion. </p><p>2. El usuario selecciona un usuario de su bandeja de entrada. </p><p>3. El sistema muestra los mensajes con ese usuario. </p>|
 |Postcondiciones |Ninguna. |
 |Alternativas/Excepciones |Ninguna.|
