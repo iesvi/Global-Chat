@@ -1,7 +1,8 @@
+
 # Manual de usuario para el uso de Global-Chat
 
 - [1. Registrarse.](#registrarse)
-- [2. Logearse](#logearse)
+- [2. Loguearse](#loguearse)
 - [3. Perfil](#perfil)
 - [4. Sala de chat](#sala-de-chat)
 - [5. Álbumes](#álbumes)
@@ -19,7 +20,7 @@ Una vez dentro del formulario de registro tendremos que rellenarlo con nuestros 
 
 En el último campo a rellenar haría referencia a la imagen que aparecerá como foto de perfil. Insertando la URL de una imagen podremos usarla.
 
-## Logearse
+## Loguearse
 
 Una vez registrado introducimos nuestros datos en el login.
 
@@ -31,7 +32,7 @@ Si todo va bien, nos saldrá un aviso de bienvenida y un menú para navegar. El 
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/perfilUsuarioNormal.PNG)
 
-Si poseemos una cuenta de Facebook podemos utilizarla también para logearnos, en mi caso utilizaré la mía, y si es login es correcto nos llevaría a la misma pestaña de bienvenida con el usuario que hemos introducido.
+Si poseemos una cuenta de Facebook podemos utilizarla también para loguearnos, en mi caso utilizaré la mía, y si es login es correcto nos llevaría a la misma pestaña de bienvenida con el usuario que hemos introducido.
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/perfilUsuarioFacebook.PNG)
 
@@ -41,7 +42,7 @@ Si accedemos a la sala de chat, es decir clickando el botón del centro, veremos
 
 ![enter image description here](https://github.com/info-iesvi/proyectodam-samuelvalleinclan/blob/doc/manualUsuario/img/chat.PNG)
 
-En la parte de la izquierda se irán visualizando los usuarios que se vayan registrando y logeando en la aplicación. En este caso solo se encuentra el usuario de "Samuel Conde López" que es el usuario que logeé con Facebook.
+En la parte de la izquierda se irán visualizando los usuarios que se vayan registrando y logueando en la aplicación. En este caso solo se encuentra el usuario de "Samuel Conde López" que es el usuario que logueé con Facebook.
 
 Para iniciar la conversación solo hay que pulsar encima del usuario y escribir el mensaje que le queramos enviar a través del cuadro de texto. 
 
