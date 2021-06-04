@@ -1,0 +1,565 @@
+[INFO] Starting ChatServiceApplication on DESKTOP-UFDN7E9 with PID 14536 (D:\PerfilSamuel\Escritorio\CHAT-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\CHAT-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 41ms. Found 2 MongoDB repository interfaces.
+[INFO] Tomcat initialized with port(s): 8080 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.36]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 892 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten] MongoDB starting : pid=14400 port=27018 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-25aeb3c2-c139-4036-bc52-19ff2e3b2533 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T11:14:33.784+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27018 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-25aeb3c2-c139-4036-bc52-19ff2e3b2533", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T11:14:33.787+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T11:14:33.843+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T11:14:33.843+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T11:14:33.843+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T11:14:33.843+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T11:14:33.843+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T11:14:34.126+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T11:14:34.126+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-25aeb3c2-c139-4036-bc52-19ff2e3b2533/diagnostic.data'
+[INFO] 2021-06-03T11:14:34.146+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T11:14:34.146+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T11:14:34.148+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T11:14:34.149+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T11:14:34.150+0200 I NETWORK  [thread1] waiting for connections on port 27018
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@cda6019
+[INFO] Cluster created with settings {hosts=[localhost:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[INFO] 2021-06-03T11:14:34.209+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:29919 #1 (1 connection now open)
+[INFO] 2021-06-03T11:14:34.214+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:29919 conn1: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27018
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=697500}
+[INFO] Initializing ExecutorService 'clientInboundChannelExecutor'
+[INFO] Initializing ExecutorService 'clientOutboundChannelExecutor'
+[INFO] Initializing ExecutorService 'messageBrokerTaskScheduler'
+[INFO] Initializing ExecutorService 'brokerChannelExecutor'
+[INFO] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO] Starting...
+[INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] Started.
+[INFO] Started ChatServiceApplication in 2.92 seconds (JVM running for 3.485)
+[INFO] Starting ChatServiceApplication on DESKTOP-UFDN7E9 with PID 19296 (D:\PerfilSamuel\Escritorio\CHAT-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\CHAT-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 33ms. Found 2 MongoDB repository interfaces.
+[INFO] Tomcat initialized with port(s): 8080 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.36]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 646 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten] MongoDB starting : pid=15312 port=27018 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-70faa9bd-b516-410e-9798-304c678beba8 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T11:16:11.284+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27018 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-70faa9bd-b516-410e-9798-304c678beba8", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T11:16:11.285+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T11:16:11.324+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T11:16:11.324+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T11:16:11.324+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T11:16:11.324+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T11:16:11.324+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T11:16:11.558+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T11:16:11.558+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-70faa9bd-b516-410e-9798-304c678beba8/diagnostic.data'
+[INFO] 2021-06-03T11:16:11.577+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T11:16:11.577+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T11:16:11.579+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T11:16:11.580+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T11:16:11.580+0200 I NETWORK  [thread1] waiting for connections on port 27018
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@640ab13c
+[INFO] Cluster created with settings {hosts=[localhost:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[INFO] 2021-06-03T11:16:11.626+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:29988 #1 (1 connection now open)
+[INFO] 2021-06-03T11:16:11.630+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:29988 conn1: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27018
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=809900}
+[INFO] Initializing ExecutorService 'clientInboundChannelExecutor'
+[INFO] Initializing ExecutorService 'clientOutboundChannelExecutor'
+[INFO] Initializing ExecutorService 'messageBrokerTaskScheduler'
+[INFO] Initializing ExecutorService 'brokerChannelExecutor'
+[INFO] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO] Starting...
+[INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] Started.
+[INFO] Started ChatServiceApplication in 1.809 seconds (JVM running for 2.223)
+[INFO] Starting ChatServiceApplication on DESKTOP-UFDN7E9 with PID 14368 (D:\PerfilSamuel\Escritorio\CHAT-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\CHAT-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 35ms. Found 2 MongoDB repository interfaces.
+[INFO] Tomcat initialized with port(s): 8080 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.36]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 758 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T15:56:43.460+0200 I CONTROL  [initandlisten] MongoDB starting : pid=1184 port=27018 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-8883cc06-4f44-474d-bafa-d39cd880928a 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T15:56:43.461+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27018 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-8883cc06-4f44-474d-bafa-d39cd880928a", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T15:56:43.461+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T15:56:43.511+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T15:56:43.511+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T15:56:43.511+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T15:56:43.511+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T15:56:43.511+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T15:56:43.775+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T15:56:43.775+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-8883cc06-4f44-474d-bafa-d39cd880928a/diagnostic.data'
+[INFO] 2021-06-03T15:56:43.798+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T15:56:43.798+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T15:56:43.800+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T15:56:43.801+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T15:56:43.801+0200 I NETWORK  [thread1] waiting for connections on port 27018
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@57562473
+[INFO] Cluster created with settings {hosts=[localhost:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[INFO] 2021-06-03T15:56:43.846+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1497 #1 (1 connection now open)
+[INFO] 2021-06-03T15:56:43.851+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:1497 conn1: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27018
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=879600}
+[INFO] Initializing ExecutorService 'clientInboundChannelExecutor'
+[INFO] Initializing ExecutorService 'clientOutboundChannelExecutor'
+[INFO] Initializing ExecutorService 'messageBrokerTaskScheduler'
+[INFO] Initializing ExecutorService 'brokerChannelExecutor'
+[INFO] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO] Starting...
+[INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] Started.
+[INFO] Started ChatServiceApplication in 2.247 seconds (JVM running for 2.832)
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 5 ms
+[INFO] 2021-06-03T15:59:36.203+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1906 #2 (2 connections now open)
+[INFO] 2021-06-03T15:59:36.203+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:1906 conn2: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27018
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Nueva sala de chat iniciada
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 3 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(3)-CONNECTED(3)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 33], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 7], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 1, completed tasks = 343]
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 3 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(3)-CONNECTED(3)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 33], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 7], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 1, completed tasks = 704]
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 3 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(3)-CONNECTED(3)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 33], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 7], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 1, completed tasks = 1065]
+[INFO] Starting ChatServiceApplication on DESKTOP-UFDN7E9 with PID 16208 (D:\PerfilSamuel\Escritorio\CHAT-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\CHAT-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 35ms. Found 2 MongoDB repository interfaces.
+[INFO] Tomcat initialized with port(s): 8080 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.36]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 849 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten] MongoDB starting : pid=12412 port=27018 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-4459a3cc-d721-4dff-ab18-6e4942252ae6 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T17:42:38.346+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27018 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-4459a3cc-d721-4dff-ab18-6e4942252ae6", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T17:42:38.347+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T17:42:38.394+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T17:42:38.394+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T17:42:38.394+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T17:42:38.394+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T17:42:38.395+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T17:42:38.774+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T17:42:38.774+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-4459a3cc-d721-4dff-ab18-6e4942252ae6/diagnostic.data'
+[INFO] 2021-06-03T17:42:38.798+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T17:42:38.798+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T17:42:38.801+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T17:42:38.802+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T17:42:38.802+0200 I NETWORK  [thread1] waiting for connections on port 27018
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@136965e3
+[INFO] Cluster created with settings {hosts=[localhost:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[INFO] 2021-06-03T17:42:38.857+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:31658 #1 (1 connection now open)
+[INFO] 2021-06-03T17:42:38.861+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:31658 conn1: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27018
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=923800}
+[INFO] Initializing ExecutorService 'clientInboundChannelExecutor'
+[INFO] Initializing ExecutorService 'clientOutboundChannelExecutor'
+[INFO] Initializing ExecutorService 'messageBrokerTaskScheduler'
+[INFO] Initializing ExecutorService 'brokerChannelExecutor'
+[INFO] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO] Starting...
+[INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] Started.
+[INFO] Started ChatServiceApplication in 2.43 seconds (JVM running for 3.041)
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 23 ms
+[INFO] 2021-06-03T18:41:20.172+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:20915 #2 (2 connections now open)
+[INFO] 2021-06-03T18:41:20.176+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:20915 conn2: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27018
+[INFO] 2021-06-03T18:41:20.225+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1866 #3 (3 connections now open)
+[INFO] 2021-06-03T18:41:20.225+0200 I NETWORK  [conn3] received client metadata from 127.0.0.1:1866 conn3: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27018
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Nueva sala de chat iniciada
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] WebSocketSession[3 current WS(3)-HttpStream(0)-HttpPoll(0), 4 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(4)-CONNECTED(4)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 12, active threads = 0, queued tasks = 0, completed tasks = 36], outboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 8], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 4, completed tasks = 38]
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Nueva sala de chat iniciada
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Nueva sala de chat iniciada
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Starting ChatServiceApplication on DESKTOP-UFDN7E9 with PID 10536 (D:\PerfilSamuel\Escritorio\CHAT-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\CHAT-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 36ms. Found 2 MongoDB repository interfaces.
+[INFO] Tomcat initialized with port(s): 8080 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.36]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 736 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten] MongoDB starting : pid=16408 port=27018 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-043a77c0-c2d7-4a28-9fe8-2867a94e94fe 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T18:51:13.491+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27018 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-043a77c0-c2d7-4a28-9fe8-2867a94e94fe", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T18:51:13.492+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T18:51:13.536+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T18:51:13.536+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T18:51:13.536+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T18:51:13.536+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T18:51:13.536+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T18:51:13.777+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T18:51:13.778+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-043a77c0-c2d7-4a28-9fe8-2867a94e94fe/diagnostic.data'
+[INFO] 2021-06-03T18:51:13.816+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T18:51:13.816+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T18:51:13.819+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T18:51:13.820+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T18:51:13.821+0200 I NETWORK  [thread1] waiting for connections on port 27018
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@2975a9e
+[INFO] Cluster created with settings {hosts=[localhost:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[INFO] 2021-06-03T18:51:13.862+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1510 #1 (1 connection now open)
+[INFO] 2021-06-03T18:51:13.867+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:1510 conn1: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27018
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=784400}
+[INFO] Initializing ExecutorService 'clientInboundChannelExecutor'
+[INFO] Initializing ExecutorService 'clientOutboundChannelExecutor'
+[INFO] Initializing ExecutorService 'messageBrokerTaskScheduler'
+[INFO] Initializing ExecutorService 'brokerChannelExecutor'
+[INFO] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO] Starting...
+[INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] Started.
+[INFO] Started ChatServiceApplication in 2.031 seconds (JVM running for 2.559)
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 2 ms
+[INFO] 2021-06-03T18:55:42.143+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1517 #2 (2 connections now open)
+[INFO] 2021-06-03T18:55:42.143+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:1517 conn2: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27018
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Nueva sala de chat iniciada
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] 2021-06-03T18:56:18.072+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:16396 #3 (3 connections now open)
+[INFO] 2021-06-03T18:56:18.072+0200 I NETWORK  [conn3] received client metadata from 127.0.0.1:16396 conn3: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27018
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Nueva sala de chat iniciada
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Nueva sala de chat iniciada
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Starting ChatServiceApplication on DESKTOP-UFDN7E9 with PID 708 (D:\PerfilSamuel\Escritorio\CHAT-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\CHAT-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 38ms. Found 2 MongoDB repository interfaces.
+[INFO] Tomcat initialized with port(s): 8080 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.36]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1017 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten] MongoDB starting : pid=12868 port=27018 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-fba7ce26-392f-453e-98f6-c3db13233b3c 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T18:59:20.421+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27018 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-fba7ce26-392f-453e-98f6-c3db13233b3c", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T18:59:20.422+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T18:59:20.476+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T18:59:20.476+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T18:59:20.476+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T18:59:20.476+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T18:59:20.476+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T18:59:20.775+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T18:59:20.775+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-fba7ce26-392f-453e-98f6-c3db13233b3c/diagnostic.data'
+[INFO] 2021-06-03T18:59:20.839+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T18:59:20.840+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T18:59:20.843+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T18:59:20.844+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T18:59:20.847+0200 I NETWORK  [thread1] waiting for connections on port 27018
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@1f03fba0
+[INFO] Cluster created with settings {hosts=[localhost:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[INFO] 2021-06-03T18:59:20.908+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:26882 #1 (1 connection now open)
+[INFO] 2021-06-03T18:59:20.932+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:26882 conn1: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27018
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1188400}
+[INFO] Initializing ExecutorService 'clientInboundChannelExecutor'
+[INFO] Initializing ExecutorService 'clientOutboundChannelExecutor'
+[INFO] Initializing ExecutorService 'messageBrokerTaskScheduler'
+[INFO] Initializing ExecutorService 'brokerChannelExecutor'
+[INFO] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO] Starting...
+[INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] Started.
+[INFO] Started ChatServiceApplication in 2.746 seconds (JVM running for 3.205)
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 6 ms
+[INFO] 2021-06-03T19:00:12.757+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1136 #2 (2 connections now open)
+[INFO] 2021-06-03T19:00:12.757+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:1136 conn2: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27018
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 12, active threads = 0, queued tasks = 0, completed tasks = 15], outboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 2, completed tasks = 2]
+[INFO] Starting ChatServiceApplication on DESKTOP-UFDN7E9 with PID 9244 (D:\PerfilSamuel\Escritorio\CHAT-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\CHAT-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 35ms. Found 2 MongoDB repository interfaces.
+[INFO] Tomcat initialized with port(s): 8080 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.36]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 866 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T19:03:12.267+0200 I CONTROL  [initandlisten] MongoDB starting : pid=4876 port=27018 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-66ac3866-cba9-4fc7-b9a1-0e5f97441288 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T19:03:12.268+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27018 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-66ac3866-cba9-4fc7-b9a1-0e5f97441288", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T19:03:12.269+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T19:03:12.326+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T19:03:12.326+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T19:03:12.326+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T19:03:12.326+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T19:03:12.326+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T19:03:12.616+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T19:03:12.616+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-66ac3866-cba9-4fc7-b9a1-0e5f97441288/diagnostic.data'
+[INFO] 2021-06-03T19:03:12.649+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T19:03:12.649+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T19:03:12.652+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T19:03:12.653+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T19:03:12.654+0200 I NETWORK  [thread1] waiting for connections on port 27018
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@53abfc07
+[INFO] Cluster created with settings {hosts=[localhost:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[INFO] 2021-06-03T19:03:12.699+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1887 #1 (1 connection now open)
+[INFO] 2021-06-03T19:03:12.704+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:1887 conn1: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27018
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=860900}
+[INFO] Initializing ExecutorService 'clientInboundChannelExecutor'
+[INFO] Initializing ExecutorService 'clientOutboundChannelExecutor'
+[INFO] Initializing ExecutorService 'messageBrokerTaskScheduler'
+[INFO] Initializing ExecutorService 'brokerChannelExecutor'
+[INFO] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO] Starting...
+[INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] Started.
+[INFO] Started ChatServiceApplication in 2.488 seconds (JVM running for 2.89)
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 2 ms
+[INFO] 2021-06-03T19:07:03.698+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:27769 #2 (2 connections now open)
+[INFO] 2021-06-03T19:07:03.698+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:27769 conn2: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27018
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Starting ChatServiceApplication on DESKTOP-UFDN7E9 with PID 3940 (D:\PerfilSamuel\Escritorio\CHAT-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\CHAT-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 71ms. Found 2 MongoDB repository interfaces.
+[INFO] Tomcat initialized with port(s): 8080 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.36]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1048 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T19:08:52.566+0200 I CONTROL  [initandlisten] MongoDB starting : pid=17672 port=27018 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-ebb9283a-eb58-438c-b0f3-4c214d227bc7 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T19:08:52.568+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27018 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-ebb9283a-eb58-438c-b0f3-4c214d227bc7", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T19:08:52.568+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T19:08:52.702+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T19:08:52.702+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T19:08:52.702+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T19:08:52.702+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T19:08:52.702+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T19:08:53.008+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T19:08:53.008+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-ebb9283a-eb58-438c-b0f3-4c214d227bc7/diagnostic.data'
+[INFO] 2021-06-03T19:08:53.030+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T19:08:53.030+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T19:08:53.032+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T19:08:53.033+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T19:08:53.034+0200 I NETWORK  [thread1] waiting for connections on port 27018
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@1d1cbd0f
+[INFO] Cluster created with settings {hosts=[localhost:27018], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[INFO] 2021-06-03T19:08:53.074+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1485 #1 (1 connection now open)
+[INFO] 2021-06-03T19:08:53.079+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:1485 conn1: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27018
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27018, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=702100}
+[INFO] Initializing ExecutorService 'clientInboundChannelExecutor'
+[INFO] Initializing ExecutorService 'clientOutboundChannelExecutor'
+[INFO] Initializing ExecutorService 'messageBrokerTaskScheduler'
+[INFO] Initializing ExecutorService 'brokerChannelExecutor'
+[INFO] Tomcat started on port(s): 8080 (http) with context path ''
+[INFO] Starting...
+[INFO] BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] Started.
+[INFO] Started ChatServiceApplication in 2.741 seconds (JVM running for 3.341)
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 2 ms
+[INFO] 2021-06-03T19:13:35.873+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:15832 #2 (2 connections now open)
+[INFO] 2021-06-03T19:13:35.874+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:15832 conn2: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27018
+[INFO] 2021-06-03T19:13:35.918+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:15834 #3 (3 connections now open)
+[INFO] 2021-06-03T19:13:35.918+0200 I NETWORK  [conn3] received client metadata from 127.0.0.1:15834 conn3: { driver: { name: "mongo-java-driver|sync|spring-boot", version: "4.0.4" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27018
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Se ha abierto una conversación
+[INFO] Nueva sala de chat iniciada
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha enviado un nuevo mensaje
+[INFO] Se ha abierto una conversación
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 27], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 7], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 1, completed tasks = 329]
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 27], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 7], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 1, completed tasks = 690]
+[INFO] WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 27], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 7], sockJsScheduler[pool size = 6, active threads = 1, queued tasks = 1, completed tasks = 1051]

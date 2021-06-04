@@ -19,7 +19,7 @@ function IdleTimetContainer(props) {
     const stayActive = () => {
         setModalIsOpen(false)
         clearTimeout(sessionTimeoutRef.current)
-        console.log("User is active")
+        console.log("Usuario activo")
     }
 
 
@@ -29,7 +29,7 @@ function IdleTimetContainer(props) {
         clearTimeout(sessionTimeoutRef.current)
         localStorage.removeItem("accessToken");
         window.location.href = "/login"
-        console.log("User has logged out")
+        console.log("El usuario se ha deslogeado")
     }
 
     return (
@@ -45,7 +45,7 @@ function IdleTimetContainer(props) {
                     <button onClick={logOut} class="btn btn-warning" >Logout</button>
                 </div>
             </Modal>
-            <IdleTimer ref={idleTimerRef} timeout={50000 * 1000} onIdle={onIdle}></IdleTimer>
+            <IdleTimer ref={idleTimerRef} timeout={120 * 1000} onIdle={onIdle}></IdleTimer>
         </div>
     )
 }

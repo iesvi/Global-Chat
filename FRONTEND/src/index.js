@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { RecoilRoot } from "recoil";
 import recoilPersist from "recoil-persist";
 import "./index.css";
+import "./mvp.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 

@@ -15,4 +15,5 @@ public class Profile {
     private String profilePictureUrl;
     private Date birthday;
     private Set<Address> addresses;
+
 }

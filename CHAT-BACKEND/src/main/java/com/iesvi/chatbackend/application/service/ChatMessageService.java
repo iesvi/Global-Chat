@@ -12,8 +12,11 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
+
 
 @Service
+@Slf4j
 public class ChatMessageService {
     @Autowired private ChatMessageRepository repository;
     @Autowired private ChatRoomService chatRoomService;
@@ -22,6 +25,9 @@ public class ChatMessageService {
     public ChatMessage save(ChatMessage chatMessage) {
         chatMessage.setStatus(MessageStatus.RECEIVED);
         repository.save(chatMessage);
+
+        log.info("Se ha enviado un nuevo mensaje");
+
         return chatMessage;
     }
 
@@ -40,6 +46,8 @@ public class ChatMessageService {
             updateStatuses(senderId, recipientId, MessageStatus.DELIVERED);
         }
 
+        log.info("Se ha abierto una conversación");
+
         return messages;
     }
 
@@ -48,10 +56,11 @@ public class ChatMessageService {
                 .findById(id)
                 .map(chatMessage -> {
                     chatMessage.setStatus(MessageStatus.DELIVERED);
+
                     return repository.save(chatMessage);
                 })
                 .orElseThrow(() ->
-                        new ResourceNotFoundException("can't find message (" + id + ")"));
+                        new ResourceNotFoundException("No se encuentra el mensaje (" + id + ")"));
     }
 
     public void updateStatuses(String senderId, String recipientId, MessageStatus status) {
@@ -63,3 +72,4 @@ public class ChatMessageService {
         mongoOperations.updateMulti(query, update, ChatMessage.class);
     }
 }
+

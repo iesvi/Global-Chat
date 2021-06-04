@@ -1,4 +1,4 @@
-package com.iesvi.samuel.authbackend.infra.endpoint;
+package com.iesvi.samuel.authbackend.infra.controller;
 
 import com.iesvi.samuel.authbackend.domain.exception.ResourceNotFoundException;
 import com.iesvi.samuel.authbackend.domain.model.InstaUserDetails;
@@ -14,7 +14,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 @Slf4j
 public class UserController {
@@ -26,7 +25,7 @@ public class UserController {
     public ResponseEntity<?> findUser(@PathVariable("username") String username) {
         log.info("Recuperando al usuario {}", username);
 
-        return  userService
+        return userService
                 .findByUsername(username)
                 .map(user -> ResponseEntity.ok(user))
                 .orElseThrow(() -> new ResourceNotFoundException(username));
@@ -35,7 +34,6 @@ public class UserController {
     @GetMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> findAll() {
         log.info("Recuperando todos los usuarios.");
-
         return ResponseEntity
                 .ok(userService.findAll());
     }
@@ -69,7 +67,7 @@ public class UserController {
     public ResponseEntity<?> getUserSummary(@PathVariable("username") String username) {
         log.info("Recuperando al usuario {}", username);
 
-        return  userService
+        return userService
                 .findByUsername(username)
                 .map(user -> ResponseEntity.ok(convertTo(user)))
                 .orElseThrow(() -> new ResourceNotFoundException(username));
