@@ -57,9 +57,9 @@ public class SecurityCredentialsConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated();
     }
 
+    // Guarda las contraseñas en la base de datos encriptadas
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // Configure DB authentication provider for user accounts
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 

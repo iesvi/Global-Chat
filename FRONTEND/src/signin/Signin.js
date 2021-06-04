@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Form, Input, Button, Divider, notification } from "antd";
 import {
   UserOutlined,
-  LockOutlined
+  LockOutlined,
+  FacebookFilled
 } from "@ant-design/icons";
 import { login, facebookLogin } from "../util/ApiUtil";
 import "./Signin.css";
@@ -144,7 +145,7 @@ const Signin = (props) => {
         <Divider></Divider>
         <Form.Item>
           <Button
-            // icon={<FacebookFilled style={{ fontSize: 20 }} />}
+            icon={<FacebookFilled style={{ fontSize: 20 }} />}
             loading={facebookLoading}
             className="login-with-facebook"
             shape="round"

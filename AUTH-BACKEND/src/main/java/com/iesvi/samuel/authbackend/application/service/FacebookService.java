@@ -35,7 +35,7 @@ public class FacebookService {
                         userDetails, null, userDetails.getAuthorities()))
                 .map(tokenProvider::generateToken)
                 .orElseThrow(() ->
-                        new InternalServerException("Impsible iniciar sesión el el ID de usuario " + facebookUser.getId()));
+                        new InternalServerException("Imposible iniciar sesión el el ID de usuario " + facebookUser.getId()));
     }
 
     private User convertTo(FacebookUser facebookUser) {

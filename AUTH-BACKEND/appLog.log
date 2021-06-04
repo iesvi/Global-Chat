@@ -1,0 +1,871 @@
+[INFO] Starting AuthServiceApplication on DESKTOP-UFDN7E9 with PID 16828 (D:\PerfilSamuel\Escritorio\AUTH-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\AUTH-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 38ms. Found 1 repository interfaces.
+[INFO] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c3a1c12d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@109a2025' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$e87663df] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Tomcat initialized with port(s): 8081 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.16]
+[INFO] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\samco\.jdks\corretto-15.0.2\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\VMware\bin\;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;D:\Vim\vim82;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\samco\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\samco\AppData\Local\Programs\Python\Python39\;C:\Python\Scripts\;C:\Python\;C:\Users\samco\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\samco\devtools\maven\3.6.3\bin;C:\nvm;C:\Program Files\nodejs;C:\Users\samco\AppData\Local\GitHubDesktop\bin;D:\Vim\vim82;;.]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1429 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten] MongoDB starting : pid=8568 port=27017 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-115bd1a7-55f9-48e6-a8aa-29de86c69740 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T11:15:28.596+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27017 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-115bd1a7-55f9-48e6-a8aa-29de86c69740", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T11:15:28.597+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T11:15:28.635+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T11:15:28.635+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T11:15:28.635+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T11:15:28.635+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T11:15:28.635+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T11:15:28.870+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T11:15:28.870+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-115bd1a7-55f9-48e6-a8aa-29de86c69740/diagnostic.data'
+[INFO] 2021-06-03T11:15:28.890+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T11:15:28.890+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T11:15:28.892+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T11:15:28.893+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T11:15:28.894+0200 I NETWORK  [thread1] waiting for connections on port 27017
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@6c977dcf
+[INFO] Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[INFO] Adding discovered server localhost:27017 to client view of cluster
+[INFO] 2021-06-03T11:15:29.346+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:29964 #1 (1 connection now open)
+[INFO] 2021-06-03T11:15:29.351+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:29964 conn1: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=933300}
+[INFO] Discovered cluster type of STANDALONE
+[INFO] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4de91056, org.springframework.security.web.context.SecurityContextPersistenceFilter@5fdb7394, org.springframework.security.web.header.HeaderWriterFilter@7d6c4079, org.springframework.web.filter.CorsFilter@388f1258, org.springframework.security.web.authentication.logout.LogoutFilter@5871a482, com.iesvi.samuel.authbackend.infra.config.JwtTokenAuthenticationFilter@2404abe2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b5798c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d6778d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16cf7fd0, org.springframework.security.web.session.SessionManagementFilter@6d3163a6, org.springframework.security.web.access.ExceptionTranslationFilter@166e5a6d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@31693a86]
+[INFO] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO] Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO] Tomcat started on port(s): 8081 (http) with context path ''
+[INFO] Started AuthServiceApplication in 3.703 seconds (JVM running for 4.261)
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 6 ms
+[INFO] 2021-06-03T11:15:30.450+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:29972 #2 (2 connections now open)
+[INFO] 2021-06-03T11:15:30.450+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:29972 conn2: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+[INFO] Starting AuthServiceApplication on DESKTOP-UFDN7E9 with PID 9940 (D:\PerfilSamuel\Escritorio\AUTH-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\AUTH-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 39ms. Found 1 repository interfaces.
+[INFO] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c62eeaa5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3f4f5330' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$eb038d57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Tomcat initialized with port(s): 8081 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.16]
+[INFO] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\samco\.jdks\corretto-15.0.2\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\VMware\bin\;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;D:\Vim\vim82;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\samco\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\samco\AppData\Local\Programs\Python\Python39\;C:\Python\Scripts\;C:\Python\;C:\Users\samco\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\samco\devtools\maven\3.6.3\bin;C:\nvm;C:\Program Files\nodejs;C:\Users\samco\AppData\Local\GitHubDesktop\bin;D:\Vim\vim82;;.]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1176 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T15:56:33.849+0200 I CONTROL  [initandlisten] MongoDB starting : pid=6288 port=27017 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-442f0e8e-85a5-4ed4-aae8-762c16302f7b 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T15:56:33.850+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27017 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-442f0e8e-85a5-4ed4-aae8-762c16302f7b", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T15:56:33.850+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T15:56:33.906+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T15:56:33.906+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T15:56:33.906+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T15:56:33.906+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T15:56:33.906+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T15:56:34.170+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T15:56:34.170+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-442f0e8e-85a5-4ed4-aae8-762c16302f7b/diagnostic.data'
+[INFO] 2021-06-03T15:56:34.193+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T15:56:34.193+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T15:56:34.196+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T15:56:34.197+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T15:56:34.197+0200 I NETWORK  [thread1] waiting for connections on port 27017
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@317890ea
+[INFO] Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[INFO] Adding discovered server localhost:27017 to client view of cluster
+[INFO] 2021-06-03T15:56:34.613+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1478 #1 (1 connection now open)
+[INFO] 2021-06-03T15:56:34.617+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:1478 conn1: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=777700}
+[INFO] Discovered cluster type of STANDALONE
+[INFO] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@323e026d, org.springframework.security.web.context.SecurityContextPersistenceFilter@27438750, org.springframework.security.web.header.HeaderWriterFilter@12448de1, org.springframework.web.filter.CorsFilter@5ce3409b, org.springframework.security.web.authentication.logout.LogoutFilter@12214f2f, com.iesvi.samuel.authbackend.infra.config.JwtTokenAuthenticationFilter@1716c037, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c7ad4f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12f51a65, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79b63325, org.springframework.security.web.session.SessionManagementFilter@6249a08d, org.springframework.security.web.access.ExceptionTranslationFilter@134abd78, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a357c3e]
+[INFO] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO] Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO] Tomcat started on port(s): 8081 (http) with context path ''
+[INFO] Started AuthServiceApplication in 3.489 seconds (JVM running for 3.925)
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 5 ms
+[INFO] 2021-06-03T15:56:35.929+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1486 #2 (2 connections now open)
+[INFO] 2021-06-03T15:56:35.929+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:1486 conn2: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+[INFO] Creando usuario samuek2000
+[INFO] Registrando al usuario samuek2000
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Creando usuario dosdos
+[INFO] Registrando al usuario dosdos
+[INFO] Recuperando usuario dosdos
+[INFO] Recuperando usuario dosdos
+[INFO] Recuperando usuario dosdos
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario dosdos
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario dosdos
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario samuek2000
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Starting AuthServiceApplication on DESKTOP-UFDN7E9 with PID 8156 (D:\PerfilSamuel\Escritorio\AUTH-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\AUTH-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 39ms. Found 1 repository interfaces.
+[INFO] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$e2c93b91] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5d425813' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$79dde43] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Tomcat initialized with port(s): 8081 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.16]
+[INFO] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\samco\.jdks\corretto-15.0.2\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\VMware\bin\;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;D:\Vim\vim82;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\samco\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\samco\AppData\Local\Programs\Python\Python39\;C:\Python\Scripts\;C:\Python\;C:\Users\samco\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\samco\devtools\maven\3.6.3\bin;C:\nvm;C:\Program Files\nodejs;C:\Users\samco\AppData\Local\GitHubDesktop\bin;D:\Vim\vim82;;.]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1215 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T17:42:42.349+0200 I CONTROL  [initandlisten] MongoDB starting : pid=17760 port=27017 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-80c62500-ef45-4f05-8093-f5151df85b84 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T17:42:42.350+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27017 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-80c62500-ef45-4f05-8093-f5151df85b84", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T17:42:42.351+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T17:42:42.399+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T17:42:42.399+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T17:42:42.399+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T17:42:42.399+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T17:42:42.399+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T17:42:42.645+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T17:42:42.645+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-80c62500-ef45-4f05-8093-f5151df85b84/diagnostic.data'
+[INFO] 2021-06-03T17:42:42.664+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T17:42:42.664+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T17:42:42.666+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T17:42:42.666+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T17:42:42.667+0200 I NETWORK  [thread1] waiting for connections on port 27017
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@5f0a2638
+[INFO] Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[INFO] Adding discovered server localhost:27017 to client view of cluster
+[INFO] 2021-06-03T17:42:43.070+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:31677 #1 (1 connection now open)
+[INFO] 2021-06-03T17:42:43.074+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:31677 conn1: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=751500}
+[INFO] Discovered cluster type of STANDALONE
+[INFO] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23bd047f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2036f83, org.springframework.security.web.header.HeaderWriterFilter@2eb6d34a, org.springframework.web.filter.CorsFilter@26ca12a2, org.springframework.security.web.authentication.logout.LogoutFilter@6aa6c17, com.iesvi.samuel.authbackend.infra.config.JwtTokenAuthenticationFilter@3562e7c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e158f33, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6dd20ec9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66d2885c, org.springframework.security.web.session.SessionManagementFilter@35e07e19, org.springframework.security.web.access.ExceptionTranslationFilter@34beadce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a95cb11]
+[INFO] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO] Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO] Tomcat started on port(s): 8081 (http) with context path ''
+[INFO] Started AuthServiceApplication in 3.325 seconds (JVM running for 3.828)
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] 2021-06-03T17:42:43.998+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:31686 #2 (2 connections now open)
+[INFO] 2021-06-03T17:42:43.998+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:31686 conn2: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+[INFO] Completed initialization in 5 ms
+[INFO] Recuperando usuario samuek2000
+[INFO] Facebook login FacebookLoginRequest(accessToken=EAAMcDZBHevEMBAKD5iMzVI46UtzrZBjM1XqrPUcoxiwlWewQSzZAqWdMwtMdxUBhRymluOjfldM5tVzvhaAnswH2pzI8GxQEJnSAZBZBZCaWfnrfetZB7OQwNWGSid3VtJiGXbFmAQmJohgFbEqn0v91C1dHCHAZCEgyy6Pz0Vc0ZAgf5pYZArd2HfiIaGJNxW0OANpDsBpHKgNf7v9FmXnERi)
+[INFO] Recuperando usuario 103458838592707
+[INFO] Registrando al usuario Samuel.Conde López.304164
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Facebook login FacebookLoginRequest(accessToken=EAAMcDZBHevEMBABFBaIkTvDtKZAZAsqa6HRJYzkpIZBBxYxk0IWZBiKJ9mPCif2YAGaqQylVr8RRYqHJ8ZAS11ImAGwpNCzhjRZBuy3Y8RCPLK56eeM5NroMdZCZCEIWE4ELqQZA8D19ymxKFYLmsLgnaPVZAAGUiurfLzvZCACvJkwnNjI7VGROmpQ98vr9nvVWE4IcrZBbCyDiITvNZBlZCZAjxLiW)
+[INFO] Recuperando usuario 103458838592707
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Creando usuario usuario1
+[INFO] Registrando al usuario usuario1
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando usuario usuario1
+[INFO] Facebook login FacebookLoginRequest(accessToken=EAAMcDZBHevEMBAH1yBdpKYwoP6Rh1y9QYZBZChTzz5ywf8w9QD3ZAYpNTsdOMCtTqUF2pEDCTJi7NoQPzK1RlZCqSv2wxTzG5xZCVZCQd3SvXzBWFzUxUNVhay0bQL0LiesbxthyJQHZCc7JYMb8grXRekGids23KO6ZBscfqqMB3OcH2dSlacV85olWATN1ZA1JlQJN7xrslw7t7ZB59KjwSpS)
+[INFO] Recuperando usuario 103458838592707
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Creando usuario usuario2
+[INFO] Registrando al usuario usuario2
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando usuario Samuel.Conde López.304164
+[INFO] Recuperando usuario usuario1
+[INFO] Starting AuthServiceApplication on DESKTOP-UFDN7E9 with PID 15984 (D:\PerfilSamuel\Escritorio\AUTH-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\AUTH-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+[INFO] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$cfa5a2ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5cbe2654' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$f47a455d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Tomcat initialized with port(s): 8081 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.16]
+[INFO] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\samco\.jdks\corretto-15.0.2\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\VMware\bin\;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;D:\Vim\vim82;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\samco\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\samco\AppData\Local\Programs\Python\Python39\;C:\Python\Scripts\;C:\Python\;C:\Users\samco\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\samco\devtools\maven\3.6.3\bin;C:\nvm;C:\Program Files\nodejs;C:\Users\samco\AppData\Local\GitHubDesktop\bin;D:\Vim\vim82;;.]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1230 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten] MongoDB starting : pid=3856 port=27017 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-bd34488e-09e9-4a2b-a3b7-592bfdb1ab36 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T18:51:11.299+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27017 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-bd34488e-09e9-4a2b-a3b7-592bfdb1ab36", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T18:51:11.300+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T18:51:11.384+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T18:51:11.384+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T18:51:11.384+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T18:51:11.384+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T18:51:11.384+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T18:51:11.738+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T18:51:11.738+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-bd34488e-09e9-4a2b-a3b7-592bfdb1ab36/diagnostic.data'
+[INFO] 2021-06-03T18:51:11.802+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T18:51:11.803+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T18:51:11.819+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T18:51:11.826+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T18:51:11.830+0200 I NETWORK  [thread1] waiting for connections on port 27017
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@4ea17147
+[INFO] Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[INFO] Adding discovered server localhost:27017 to client view of cluster
+[INFO] 2021-06-03T18:51:12.409+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1499 #1 (1 connection now open)
+[INFO] 2021-06-03T18:51:12.419+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:1499 conn1: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1215800}
+[INFO] Discovered cluster type of STANDALONE
+[INFO] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d55dd21, org.springframework.security.web.context.SecurityContextPersistenceFilter@42576db9, org.springframework.security.web.header.HeaderWriterFilter@7254838, org.springframework.web.filter.CorsFilter@25ae1f80, org.springframework.security.web.authentication.logout.LogoutFilter@5a8d676e, com.iesvi.samuel.authbackend.infra.config.JwtTokenAuthenticationFilter@7d6c4079, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fac18dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c92a549, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@606b53a3, org.springframework.security.web.session.SessionManagementFilter@2bfc8558, org.springframework.security.web.access.ExceptionTranslationFilter@2987d0fa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d85b399]
+[INFO] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO] Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO] Tomcat started on port(s): 8081 (http) with context path ''
+[INFO] Started AuthServiceApplication in 4.157 seconds (JVM running for 4.656)
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 6 ms
+[INFO] 2021-06-03T18:51:13.804+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1509 #2 (2 connections now open)
+[INFO] 2021-06-03T18:51:13.810+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:1509 conn2: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+[INFO] Creando usuario usuario1
+[INFO] Registrando al usuario usuario1
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando usuario usuario1
+[INFO] Facebook login FacebookLoginRequest(accessToken=EAAMcDZBHevEMBAKFxrCoAruVasE2XmsR6f4LXhmChqGbjDEtZBfRZAqoZADSnupcGwIlZAtIUFZCl8kkKSiBvvAw00IJjGlH9dZBN7benHngtAjUkpivYC0uu9nDGNgWvWVq9EbTIs5CiKZBJoUjre2AsTUDTdiGZCNZBKa3cWBNG41GWNIqX3LUIMrZCIKyxU5O6ftUNlfKCGLP9IQPCufEhVDZBSYMsMqFCocZD)
+[INFO] Recuperando usuario 103458838592707
+[INFO] Registrando al usuario Samuel.Conde López.051756
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Creando usuario usuario2
+[INFO] Registrando al usuario usuario2
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] 2021-06-03T18:58:06.553+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:18774 #3 (3 connections now open)
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] 2021-06-03T18:58:06.554+0200 I NETWORK  [conn3] received client metadata from 127.0.0.1:18774 conn3: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27017
+[INFO] Recuperando usuario Samuel.Conde López.051756
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Starting AuthServiceApplication on DESKTOP-UFDN7E9 with PID 7364 (D:\PerfilSamuel\Escritorio\AUTH-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\AUTH-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 37ms. Found 1 repository interfaces.
+[INFO] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$b90b755e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@64b3b1ce' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$dde01810] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Tomcat initialized with port(s): 8081 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.16]
+[INFO] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\samco\.jdks\corretto-15.0.2\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\VMware\bin\;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;D:\Vim\vim82;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\samco\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\samco\AppData\Local\Programs\Python\Python39\;C:\Python\Scripts\;C:\Python\;C:\Users\samco\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\samco\devtools\maven\3.6.3\bin;C:\nvm;C:\Program Files\nodejs;C:\Users\samco\AppData\Local\GitHubDesktop\bin;D:\Vim\vim82;;.]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1074 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T18:59:22.970+0200 I CONTROL  [initandlisten] MongoDB starting : pid=16292 port=27017 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-9e882ea2-9f23-498b-a760-6f4b275dc7ae 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T18:59:22.971+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27017 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-9e882ea2-9f23-498b-a760-6f4b275dc7ae", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T18:59:22.971+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T18:59:23.016+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T18:59:23.016+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T18:59:23.016+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T18:59:23.016+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T18:59:23.016+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T18:59:23.277+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T18:59:23.277+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-9e882ea2-9f23-498b-a760-6f4b275dc7ae/diagnostic.data'
+[INFO] 2021-06-03T18:59:23.299+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T18:59:23.299+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T18:59:23.301+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T18:59:23.302+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T18:59:23.303+0200 I NETWORK  [thread1] waiting for connections on port 27017
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@776015fc
+[INFO] Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[INFO] Adding discovered server localhost:27017 to client view of cluster
+[INFO] 2021-06-03T18:59:23.683+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:26897 #1 (1 connection now open)
+[INFO] 2021-06-03T18:59:23.687+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:26897 conn1: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=822000}
+[INFO] Discovered cluster type of STANDALONE
+[INFO] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10b87ff6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4756e5cc, org.springframework.security.web.header.HeaderWriterFilter@24405466, org.springframework.web.filter.CorsFilter@426710f0, org.springframework.security.web.authentication.logout.LogoutFilter@315b5913, com.iesvi.samuel.authbackend.infra.config.JwtTokenAuthenticationFilter@63262071, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3dbb3fb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c421952, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d4f67e, org.springframework.security.web.session.SessionManagementFilter@7c0de229, org.springframework.security.web.access.ExceptionTranslationFilter@134d7ffa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@323e026d]
+[INFO] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO] Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO] Tomcat started on port(s): 8081 (http) with context path ''
+[INFO] Started AuthServiceApplication in 3.167 seconds (JVM running for 3.704)
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] 2021-06-03T18:59:24.669+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:26907 #2 (2 connections now open)
+[INFO] 2021-06-03T18:59:24.669+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:26907 conn2: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+[INFO] Completed initialization in 5 ms
+[INFO] Creando usuario Usuario2
+[INFO] Registrando al usuario Usuario2
+[INFO] Recuperando usuario Usuario2
+[INFO] Recuperando usuario Usuario2
+[INFO] Recuperando usuario Usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario2
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Creando usuario Usuario1
+[INFO] Registrando al usuario Usuario1
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando usuario Usuario1
+[INFO] Starting AuthServiceApplication on DESKTOP-UFDN7E9 with PID 16200 (D:\PerfilSamuel\Escritorio\AUTH-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\AUTH-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 36ms. Found 1 repository interfaces.
+[INFO] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$4bcec1cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a22bad6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$70a3647e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Tomcat initialized with port(s): 8081 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.16]
+[INFO] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\samco\.jdks\corretto-15.0.2\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\VMware\bin\;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;D:\Vim\vim82;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\samco\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\samco\AppData\Local\Programs\Python\Python39\;C:\Python\Scripts\;C:\Python\;C:\Users\samco\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\samco\devtools\maven\3.6.3\bin;C:\nvm;C:\Program Files\nodejs;C:\Users\samco\AppData\Local\GitHubDesktop\bin;D:\Vim\vim82;;.]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1065 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten] MongoDB starting : pid=12708 port=27017 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-5ba5a173-84a9-4cb6-8920-0b1e08bd7412 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T19:03:14.571+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27017 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-5ba5a173-84a9-4cb6-8920-0b1e08bd7412", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T19:03:14.572+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T19:03:14.612+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T19:03:14.612+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T19:03:14.612+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T19:03:14.612+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T19:03:14.612+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T19:03:14.863+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T19:03:14.863+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-5ba5a173-84a9-4cb6-8920-0b1e08bd7412/diagnostic.data'
+[INFO] 2021-06-03T19:03:14.884+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T19:03:14.884+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T19:03:14.885+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T19:03:14.887+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T19:03:14.887+0200 I NETWORK  [thread1] waiting for connections on port 27017
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@1f66d8e1
+[INFO] Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[INFO] Adding discovered server localhost:27017 to client view of cluster
+[INFO] 2021-06-03T19:03:15.282+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1900 #1 (1 connection now open)
+[INFO] 2021-06-03T19:03:15.286+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:1900 conn1: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=605700}
+[INFO] Discovered cluster type of STANDALONE
+[INFO] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cc7e3ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@27dc335a, org.springframework.security.web.header.HeaderWriterFilter@12214f2f, org.springframework.web.filter.CorsFilter@4adf3582, org.springframework.security.web.authentication.logout.LogoutFilter@6cf047cf, com.iesvi.samuel.authbackend.infra.config.JwtTokenAuthenticationFilter@5dd6a4c8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@915d7c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6029f2a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47be41c6, org.springframework.security.web.session.SessionManagementFilter@39374689, org.springframework.security.web.access.ExceptionTranslationFilter@7645e64, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26463a6]
+[INFO] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO] Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO] Tomcat started on port(s): 8081 (http) with context path ''
+[INFO] Started AuthServiceApplication in 3.289 seconds (JVM running for 3.766)
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 5 ms
+[INFO] 2021-06-03T19:03:16.302+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1909 #2 (2 connections now open)
+[INFO] 2021-06-03T19:03:16.302+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:1909 conn2: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+[INFO] Creando usuario Usuario1
+[INFO] Registrando al usuario Usuario1
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando usuario Usuario1
+[INFO] Facebook login FacebookLoginRequest(accessToken=EAAMcDZBHevEMBAEPReUvxKBPlidiCh7hPyZAOH0lXcWUdbAFQ7cLnOx9FTZARnXuNZAOXM80Q3JhlBxZBLMdzF9MPGY0YODUE2E8cZA2XK2Pg2oBIx8XgQzwjURTKRFyclZAQtXCHFHBI9szDq2i5yiHLMLOVoBGzr9efBba4vGnl2hBEiNmmQjncGuCMQ0Yt2UHqgOHTQa6FPWsCFHqNRk)
+[INFO] Recuperando usuario 103458838592707
+[INFO] Registrando al usuario Samuel.Conde López.300284
+[INFO] Recuperando usuario Samuel.Conde López.300284
+[INFO] Recuperando usuario Samuel.Conde López.300284
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.300284
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.300284
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario2
+[INFO] Starting AuthServiceApplication on DESKTOP-UFDN7E9 with PID 7964 (D:\PerfilSamuel\Escritorio\AUTH-BACKEND\target\classes started by Samuel in D:\PerfilSamuel\Escritorio\AUTH-BACKEND)
+[INFO] No active profile set, falling back to default profiles: default
+[INFO] Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO] Finished Spring Data repository scanning in 37ms. Found 1 repository interfaces.
+[INFO] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$29a025b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@304d0259' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$4e74c868] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] Tomcat initialized with port(s): 8081 (http)
+[INFO] Starting service [Tomcat]
+[INFO] Starting Servlet engine: [Apache Tomcat/9.0.16]
+[INFO] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\samco\.jdks\corretto-15.0.2\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\VMware\bin\;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\nvm;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;D:\Vim\vim82;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\samco\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\samco\AppData\Local\Programs\Python\Python39\;C:\Python\Scripts\;C:\Python\;C:\Users\samco\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\samco\devtools\maven\3.6.3\bin;C:\nvm;C:\Program Files\nodejs;C:\Users\samco\AppData\Local\GitHubDesktop\bin;D:\Vim\vim82;;.]
+[INFO] Initializing Spring embedded WebApplicationContext
+[INFO] Root WebApplicationContext: initialization completed in 1085 ms
+[INFO] note: noprealloc may hurt performance in many applications
+[INFO] 2021-06-03T19:08:53.996+0200 I CONTROL  [initandlisten] MongoDB starting : pid=3304 port=27017 dbpath=C:\Users\samco\AppData\Local\Temp\embedmongo-db-aa0b3e0a-6829-476d-9ef1-1c759ae0f1f2 64-bit host=DESKTOP-UFDN7E9
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten] db version v3.5.5
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten] modules: none
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten] build environment:
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten]     distarch: x86_64
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+[INFO] 2021-06-03T19:08:53.997+0200 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", http: { enabled: false }, port: 27017 }, security: { authorization: "disabled" }, storage: { dbPath: "C:\Users\samco\AppData\Local\Temp\embedmongo-db-aa0b3e0a-6829-476d-9ef1-1c759ae0f1f2", journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true } } }
+[INFO] 2021-06-03T19:08:53.997+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7636M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+[INFO] 2021-06-03T19:08:54.038+0200 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+[INFO] 2021-06-03T19:08:54.038+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T19:08:54.038+0200 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+[INFO] 2021-06-03T19:08:54.038+0200 I CONTROL  [initandlisten] **       Not recommended for production.
+[INFO] 2021-06-03T19:08:54.038+0200 I CONTROL  [initandlisten] 
+[INFO] 2021-06-03T19:08:54.277+0200 W FTDC     [initandlisten] Failed to initialize Performance Counters for FTDC: WindowsPdhError: PdhExpandCounterPathW failed with 'El objeto especificado no se encontró en el equipo.' for counter '\Memory\Available Bytes'
+[INFO] 2021-06-03T19:08:54.277+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/samco/AppData/Local/Temp/embedmongo-db-aa0b3e0a-6829-476d-9ef1-1c759ae0f1f2/diagnostic.data'
+[INFO] 2021-06-03T19:08:54.303+0200 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+[INFO] 2021-06-03T19:08:54.303+0200 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+[INFO] 2021-06-03T19:08:54.305+0200 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+[INFO] 2021-06-03T19:08:54.307+0200 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+[INFO] 2021-06-03T19:08:54.308+0200 I NETWORK  [thread1] waiting for connections on port 27017
+[INFO] start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@359066bc
+[INFO] Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[INFO] Adding discovered server localhost:27017 to client view of cluster
+[INFO] 2021-06-03T19:08:54.715+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1497 #1 (1 connection now open)
+[INFO] 2021-06-03T19:08:54.720+0200 I NETWORK  [conn1] received client metadata from 127.0.0.1:1497 conn1: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+[INFO] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 5, 5]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=822600}
+[INFO] Discovered cluster type of STANDALONE
+[INFO] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64757d56, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ca22e19, org.springframework.security.web.header.HeaderWriterFilter@1846ad0f, org.springframework.web.filter.CorsFilter@388f1258, org.springframework.security.web.authentication.logout.LogoutFilter@ff1f465, com.iesvi.samuel.authbackend.infra.config.JwtTokenAuthenticationFilter@4813d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1bfa3893, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24a3d414, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@702096ef, org.springframework.security.web.session.SessionManagementFilter@44aed6a4, org.springframework.security.web.access.ExceptionTranslationFilter@a69f9d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2aac8ad7]
+[INFO] Initializing ExecutorService 'applicationTaskExecutor'
+[INFO] Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO] Tomcat started on port(s): 8081 (http) with context path ''
+[INFO] Started AuthServiceApplication in 3.331 seconds (JVM running for 3.812)
+[INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO] Initializing Servlet 'dispatcherServlet'
+[INFO] Completed initialization in 7 ms
+[INFO] 2021-06-03T19:08:55.652+0200 I NETWORK  [thread1] connection accepted from 127.0.0.1:1505 #2 (2 connections now open)
+[INFO] 2021-06-03T19:08:55.658+0200 I NETWORK  [conn2] received client metadata from 127.0.0.1:1505 conn2: { driver: { name: "mongo-java-driver", version: "3.8.2" }, os: { type: "Windows", name: "Windows 10", architecture: "amd64", version: "10.0" }, platform: "Java/Amazon.com Inc./15.0.2+7" }
+[INFO] Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
+[INFO] Creando usuario Usuario1
+[INFO] Registrando al usuario Usuario1
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando usuario Usuario1
+[INFO] Facebook login FacebookLoginRequest(accessToken=EAAMcDZBHevEMBAPMYLFZCvdRIB6VWR50Uf7Ka8rzQ4dWTQqK8wsZCZCDkMnEq75IljitPyN3UWuI1TVlZAk8Fis4uFKOVmQn4wrMKWYtEACSZANZBOijNUIHajx7ZB9ELFPMAkcnZCIRyyoqaZAVvPKaiyxlvIbWmZATMbz6lw71huK3ZAfxAFgsZAyoZB5tfn6i2haGJ9j4yIB4wmVQXmVnnZBct6D)
+[INFO] Recuperando usuario 103458838592707
+[INFO] Registrando al usuario Samuel.Conde López.299247
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando todos los usuarios.
+[INFO] Recuperando usuario Samuel.Conde López.299247
+[INFO] Recuperando usuario Usuario1
+[INFO] Recuperando usuario Samuel.Conde López.299247

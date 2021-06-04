@@ -1,5 +1,4 @@
-package com.iesvi.samuel.authbackend.infra.endpoint;
-
+package com.iesvi.samuel.authbackend.infra.controller;
 
 import com.iesvi.samuel.authbackend.application.payload.*;
 import com.iesvi.samuel.authbackend.domain.exception.BadRequestException;
@@ -72,4 +71,6 @@ public class AuthController {
                 .created(location)
                 .body(new ApiResponse(true,"Usuario registrado correctamente."));
     }
+
+
 }

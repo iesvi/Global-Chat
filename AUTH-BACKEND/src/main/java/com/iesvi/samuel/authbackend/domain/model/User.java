@@ -17,33 +17,12 @@ import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document
+@Document(collection = "User")
 public class User {
-
-    public User(User user) {
-        this.id = user.id;
-        this.username = user.username;
-        this.password = user.password;
-        this.email = user.email;
-        this.createdAt = user.getCreatedAt();
-        this.updatedAt = user.getUpdatedAt();
-        this.active = user.active;
-        this.userProfile = user.userProfile;
-        this.roles = user.roles;
-    }
-
-    public User(String username, String password, String email) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.active = true;
-        this.roles = new HashSet<>() {{ new Role("USER"); }};
-    }
 
     @Id
     private String id;
@@ -71,4 +50,25 @@ public class User {
     private boolean active;
     private Profile userProfile;
     private Set<Role> roles;
+
+    public User(User user) {
+        this.id = user.id;
+        this.username = user.username;
+        this.password = user.password;
+        this.email = user.email;
+        this.createdAt = user.getCreatedAt();
+        this.updatedAt = user.getUpdatedAt();
+        this.active = user.active;
+        this.userProfile = user.userProfile;
+        this.roles = user.roles;
+    }
+
+    public User(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.active = true;
+        this.roles = new HashSet<>() {{ new Role("USER"); }};
+    }
+
 }

@@ -21,10 +21,12 @@
   max-width: 340px;
   width: 40%;
   height: 100%;
-  background: #1d5ae2;
+  background: #2c3e50;
   color: #f5f5f5;
   overflow: hidden;
   position: relative;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel {
@@ -75,10 +77,9 @@
   }
 }
 #frame #sidepanel #profile .wrap img {
-  width: 60px;
+  width: 50px;
   border-radius: 50%;
   padding: 3px;
-  /* border: 2px solid #e74c3c; */
   height: auto;
   float: left;
   cursor: pointer;
@@ -331,22 +332,14 @@
   margin: 0 8px 5px 0;
   padding: 5px 0;
 }
-#frame #sidepanel #profile .wrap #expanded input {
-  border: none;
-  margin-bottom: 6px;
-  background: #32465a;
-  border-radius: 3px;
-  color: #f5f5f5;
-  padding: 7px;
-  width: calc(100% - 43px);
-}
+
 #frame #sidepanel #profile .wrap #expanded input:focus {
   outline: none;
   background: #435f7a;
 }
 #frame #sidepanel #search {
-  border-top: 1px solid #bddeff;
-  border-bottom: 1px solid #bedfff;
+  border-top: 1px solid #32465a;
+  border-bottom: 1px solid #32465a;
   font-weight: 300;
 }
 @media screen and (max-width: 735px) {
@@ -419,11 +412,11 @@
   }
 }
 #frame #sidepanel #contacts ul li.contact:hover {
-  background: #3c73eb;
+  background: #32465a;
 }
 #frame #sidepanel #contacts ul li.contact.active {
-  background: #3c73eb;
-  /* border-right: 5px solid #2063df; */
+  background: #32465a;
+  border-right: 5px solid #435f7a;
 }
 #frame #sidepanel #contacts ul li.contact.active span.contact-status {
   border: 2px solid #32465a !important;
@@ -490,7 +483,7 @@
   -o-transition: 1s all ease;
   -webkit-transition: 1s all ease;
   transition: 1s all ease;
-  color: rgb(0, 255, 42);
+  color: green;
 }
 #frame #sidepanel #contacts ul li.contact .wrap .meta .preview span {
   position: initial;
@@ -511,7 +504,7 @@
   border: none;
   width: 50%;
   padding: 10px 0;
-  background: #003dc2;
+  background: #32465a;
   color: #f5f5f5;
   cursor: pointer;
   font-size: 0.85em;
@@ -537,7 +530,7 @@
   }
 }
 #frame #sidepanel #bottom-bar button:hover {
-  background: #3c73eb;
+  background: #435f7a;
 }
 #frame #sidepanel #bottom-bar button i {
   margin-right: 3px;
@@ -560,7 +553,7 @@
   overflow: hidden;
   position: relative;
   border-top-right-radius: 10px;
- 
+  border-bottom-right-radius: 10px;
 }
 @media screen and (max-width: 735px) {
   #frame .content {
@@ -636,7 +629,7 @@
   margin: 6px 8px 0 0;
 }
 #frame .content .messages ul li.replies p {
-  background: #0961ee;
+  background: #435f7a;
   color: #f5f5f5;
 }
 #frame .content .messages ul li.sent img {
@@ -678,7 +671,7 @@
   font-family: "proxima-nova", "Source Sans Pro", sans-serif;
   float: left;
   border: none;
-  width: calc(100% - 51px);
+  width: calc(92.5% - 51px);
   padding: 14px 32px 8px 8px;
   font-size: 0.8em;
   color: #32465a;
@@ -714,10 +707,10 @@
 #frame .content .message-input .wrap button {
   float: right;
   border: none;
-  width: 51px;
+  width: 50px;
   padding: 12px 0;
   cursor: pointer;
-  background: #0961ee;
+  background: #32465a;
   color: #f5f5f5;
   height: 48px;
 }
@@ -727,8 +720,9 @@
   }
 }
 #frame .content .message-input .wrap button:hover {
-  background: #3c73eb;
+  background: #435f7a;
 }
 #frame .content .message-input .wrap button:focus {
   outline: none;
 }
+

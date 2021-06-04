@@ -15,6 +15,9 @@ import {
 import ScrollToBottom from "react-scroll-to-bottom";
 import "./Chat.css";
 
+import "emoji-mart/css/emoji-mart.css";
+import { Picker } from "emoji-mart";
+
 var stompClient = null;
 const Chat = (props) => {
   const currentUser = useRecoilValue(loggedInUser);
@@ -125,6 +128,26 @@ const Chat = (props) => {
     window.location.href = "/";
   }
 
+  // Emoji Picker
+  const [emojiPickerState, SetEmojiPicker] = useState(false);
+  const [message, SetMessage] = useState("");
+
+  let emojiPicker;
+  if (emojiPickerState) {
+    emojiPicker = (
+      <Picker
+        title="Elije un emoticono..."
+        emoji="point_up"
+        onSelect={emoji => SetMessage(message + emoji.native)}
+      />
+    );
+  }
+
+  function triggerPicker(event) {
+    event.preventDefault();
+    SetEmojiPicker(!emojiPickerState);
+  }
+
   return (
     <div id="frame">
       <div id="sidepanel">
@@ -197,12 +220,14 @@ const Chat = (props) => {
               name="user_input"
               size="large"
               placeholder="Escribe un mensaje..."
-              value={text}
-              onChange={(event) => setText(event.target.value)}
+              value={message}
+              onChange={event => SetMessage(event.target.value)}
+              // value={text}
+              // onChange={(event) => setText(event.target.value)}
               onKeyPress={(event) => {
                 if (event.key === "Enter") {
-                  sendMessage(text);
-                  setText("");
+                  sendMessage(message);
+                  SetMessage("");
                 }
               }}
             />
@@ -210,11 +235,19 @@ const Chat = (props) => {
             <Button
               icon={<i class="fa fa-paper-plane" aria-hidden="true"></i>}
               onClick={() => {
-                sendMessage(text);
-                setText("");
+                sendMessage(message);
+                SetMessage("");
               }}
             />
+            <button
+              class="bg-transparent"
+              onClick={triggerPicker}
+            >
+              <span style={{ fontSize: "large", borderColor: "black" }} role="img" aria-label="">😁</span>
+            </button>
+
           </div>
+          {emojiPicker}
         </div>
       </div>
     </div>
